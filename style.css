@@ -10,3 +10,15 @@ h2, h3, h4
 {
     border: 2px black solid;
 }
+.arm_left
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.trunk
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
