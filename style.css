@@ -3,11 +3,12 @@ html
 	display: flex;
 	position: left 100px;
 	position: right 100px;
-	width: 1450px;
+	width: 1415px;
+	background-color: #faf9f5
 }
 h2
 {
-	color: blue;
+	color: #0744de;
 }
 h2, h3, h4
 {
@@ -21,9 +22,13 @@ h2, h3, h4
 }
 .header_branch
 {
-	text-shadow: 1px 1px 2px blue;
+	text-shadow: 1px 1px 2px #2b00d9;
 	display: inline-block;
 	vertical-align: top;
+}
+.title_profil
+{
+	width: 120px;
 }
 .profil
 {
