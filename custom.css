@@ -1,0 +1,9 @@
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+.custom-element
+{
+	color: $indigo-700;
+}
