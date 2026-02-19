@@ -1,210 +1,195 @@
-<!DOCTYPE html>
-<html lang="en, fr">
-    <head>
-        <!-- Core theme CSS (includes Bootstrap 5.1.0)-->
-        <link rel="stylesheet" href="css/styles_5.1.0.css" />
+﻿<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrien DEBREUILLY | Développeur Informatique - Security by Design</title>
+    <meta name="description" content="Portfolio de Adrien DEBREUILLY, Développeur Informatique (Web, Mobile, Desktop) orienté sécurité et sûreté logicielle.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- KwesForms Script (Gestion du formulaire & Stats) -->
+    <script src="https://kwesforms.com/v2/kwes-script.js" defer></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#0f172a', accent: '#3b82f6' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url('Bannière-Linkedin_Adrien_DEBREUILLY.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-
-        <meta charset="utf-8" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        
-        <meta name="description" content="" />
-        
-        <meta name="author" content="Adrien DEBREUILLY" />
-
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" crossorigin="anonymous"></script>
-
-        <title>Adrien_DEBREUILLY-Acceuil_Page</title>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">Adrien_DEBREUILLY</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-default-color text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#CV">CV</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#enterprise">Entreprise</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                    </ul>
-                </div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/95 text-white backdrop-blur-sm shadow-xl" role="navigation" aria-label="Menu principal">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-black tracking-tighter italic uppercase">Adrien <span class="text-accent text-2xl">.</span></a>
+            <div class="hidden md:flex space-x-8 text-xs uppercase font-black tracking-widest">
+                <a href="#about" class="hover:text-accent transition">Parcours</a>
+                <a href="#projects" class="hover:text-accent transition">Projets</a>
+                <a href="#contact" class="bg-accent px-4 py-2 rounded shadow-lg hover:bg-blue-600 transition font-bold">Contact</a>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-default-color text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5 rounded" src="assets/img/avatar.png" alt="..." />
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fab fa-jedi-order"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Developpeur Applicatif</p>
-            </div>
-        </header>
-
-        <!-- CV Section-->
-        <section class="page-section bg-dark text-white mb-0" id="CV">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">CV</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="far fa-address-card"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1grkCeC19l0G4YI3sshAeGsZlluYw2LxG/view?usp=drive_link">
-                        <i class="far fa-address-card"></i>
-                        <i class="fas fa-angle-double-right"></i>
-                        Pour plus de Details
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Eterprise Section-->
-        <section class="page-section bg-default-color text-white mb-0" id="enterprise">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Entreprise</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="far fa-building"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Edvance est une société détenue à 80 % par EDF et à 20% par Framatome. Edvance est une SAS (Société par Actions Simplifiée), filiale d'EDF une SA (Société anonyme)</p></div>
-
-                    <div class="col-lg-4 me-auto"><p class="lead">Eliance est une Fédération détenue par des OS et des ES. Valogene est une SAS (Société par Actions Simplifiée), filiale d'Eliance une SAS (Société par Actions Simplifiée)</p></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mb-5 mb-lg-0 text-center">
-                        </a>
-                        <!-- About Section Button presentation entreprise personelle-->
-                        <a class="btn btn-xl btn-outline-light" href="https://www.edf.fr">
-                            <i class="far fa-address-card"></i>
-                            <i class="fas fa-angle-double-right"></i>
-                            Pour plus de Details sur la première
-                        </a>
-                        </a>
-                        <!-- About Section Button presentation entreprise personelle-->
-                        <a class="btn btn-xl btn-outline-light" href="https://www.eliance.fr">
-                            <i class="far fa-address-card"></i>
-                            <i class="fas fa-angle-double-right"></i>
-                            Pour plus de Details sur la second
-                        </a>
-                    </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section-->
-        <section class="page-section bg-dark text-white mb-0 portfolio" id="portfolio">
-            <div class="container text-center">
-
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Portfolio</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-th"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1m1Q3dLFzPIHOvw3gTnuntIx25dgphnce/view?usp=sharing">Decoupler</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1NhXvi5Hl78YWKyDo0mmCTI2LFJJ-o9Do/view?usp=sharing">Assembler</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1huHXD6vsmYWjvRRB7TfWqUM3wsKCqYjZ/view?usp=sharing">FPC</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1Yc8ZyLppyti-OCwP7nqLhKF2So004_ti/view?usp=sharing">Pigeon</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1oZlCgpprOKAVXqjpgTi91wrKiV554ffr/view?usp=sharing">DEDALE</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1nZIHAuZ28e4_4qvj3OfhBBnk14UOwr6-/view?usp=sharing">Plants</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1fZ0Yute3kSpKiudXvQhBcTk8PU3JITRa/view?usp=sharing">Facturation</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/190rwQRrJg8QWnSHwR76e-3FsLty_KicX/view?usp=sharing">Recette BDC</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/15Nr8cEIfc97cPn1Xb_f1FfboxjcRLsBC/view?usp=sharing">Recette GI SIG</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1vpG-leA4BXZe2emk2xTypPx07T36BF49/view?usp=sharing">Pré Etude</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1VauNbyB1NS0Welg8yCH6LoG7sARIvm86/view?usp=sharing">Présentation Entreprise</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1yX7dXO8gSBA-ee4wsOpyl7nd-bVDJfwn/view?usp=sharing">Bibliothèque Perso and Family</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"><a class="btn btn-xl btn-outline-light" href="https://drive.google.com/file/d/1IaIFINTE-g88BYbt4khbmAHrHWofdKAG/view?usp=sharing">Veille Technologique</a></div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3"></div>
-                  </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Footer-->
-        <footer class="footer text-center" id="contact">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-12 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">You Can Find Me On</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/debreuillyadrien/?originalSubdomain=fr"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.github.com/AdrienDEBREUILLY"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Website 2023</small></div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section pt-32 pb-24 text-white">
+            <div class="container mx-auto px-6 flex flex-col items-center text-center">
+                <div class="mb-8 relative">
+                    <img src="assets/img/avatar.png" alt="Portrait de Adrien DEBREUILLY" class="w-32 h-32 rounded-2xl border-4 border-accent shadow-2xl transition duration-500 hover:scale-105">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Développeur <span class="text-accent font-black">Informatique</span></h1>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-3xl font-light italic leading-relaxed">
+                    "Conception logicielle robuste, polyvalente et orientée <span class="text-white font-bold underline decoration-accent">Security by Design</span>."
+                </p>
+                <div class="mt-12 flex flex-wrap justify-center gap-6 font-black uppercase text-sm">
+                    <a href="#projects" class="bg-white text-slate-900 px-10 py-4 rounded-full hover:scale-105 transition transform shadow-xl">Voir mes travaux</a>
+                    <a href="#contact" class="border-2 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-slate-900 transition shadow-xl">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parcours -->
+        <section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl font-black mb-12 uppercase tracking-tighter border-b-8 border-accent inline-block">Mon Parcours</h2>
+                
+                <div class="grid md:grid-cols-3 gap-12 items-start">
+                    <div class="space-y-4">
+                        <div class="text-accent font-black text-xl uppercase italic">Formation</div>
+                        <ul class="space-y-4">
+                            <li>
+                                <h3 class="font-black text-lg">Licence Pro CPI</h3>
+                                <p class="text-slate-500 text-sm italic">Coordinateur de Projet - Spé. CCVA (2025)</p>
+                            </li>
+                            <li>
+                                <h3 class="font-black text-lg">BTS SIO</h3>
+                                <p class="text-slate-500 text-sm italic">Option SLAM (2024)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2 space-y-8">
+                        <div class="text-accent font-black text-xl uppercase italic">Expertise Technique</div>
+                        <div class="grid grid-cols-2 gap-4 text-sm font-bold">
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="text-[10px] uppercase text-slate-400 mb-2">Langages</h4>
+                                Python, JS/TS, Java, C++, SQL, PHP, Kotlin
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="text-[10px] uppercase text-slate-400 mb-2">DevOps & Sécu</h4>
+                                Docker, Kubernetes, Ansible, CI/CD, Terraform, Packer
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="text-[10px] uppercase text-slate-400 mb-2">Base de données</h4>
+                                PostgreSQL, MySQL, MariaDB
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="text-[10px] uppercase text-slate-400 mb-2">Gestion de Projet</h4>
+                                AGILE, Jira, Trello, ClickUP, Recueil de besoins, Architecture
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Études de Cas -->
+        <section id="projects" class="py-24 bg-slate-900 text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-black mb-16 text-center uppercase tracking-tighter italic">Études de Cas <span class="text-accent">Détaillées</span></h2>
+                
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Projet 1 -->
+                    <article class="p-8 bg-slate-800 rounded-3xl border border-slate-700 flex flex-col h-full shadow-lg hover:shadow-2xl transition duration-300">
+                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Projet AME</span>
+                        <h3 class="text-2xl font-black mb-4 uppercase">Refonte Web & E-Commerce</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">Modernisation d'une plateforme vitrine et boutique. Architecture dockerisée, intégration de paiements sécurisés et tests de cybersécurité.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest text-white/50">
+                            <span class="px-3 py-1 bg-white/5 rounded">Docker</span>
+                            <span class="px-3 py-1 bg-white/5 rounded">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-white/5 rounded">TS</span>
+                        </div>
+                    </article>
+
+                    <!-- Projet 2 -->
+                    <article class="p-8 bg-slate-800 rounded-3xl border border-slate-700 flex flex-col h-full shadow-lg hover:shadow-2xl transition duration-300">
+                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Projet Valogène</span>
+                        <h3 class="text-2xl font-black mb-4 uppercase">Contrôle de Données</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">Audit d'intégrité sur des flux de données nationaux. Automatisation d'outils métiers de facturation et de réversibilité.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest text-white/50">
+                            <span class="px-3 py-1 bg-white/5 rounded">Python</span>
+                            <span class="px-3 py-1 bg-white/5 rounded">R / C++</span>
+                            <span class="px-3 py-1 bg-white/5 rounded">DBeaver</span>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3 -->
+                    <article class="p-8 bg-slate-800 rounded-3xl border border-slate-700 flex flex-col h-full shadow-lg hover:shadow-2xl transition duration-300">
+                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Projet Edvance</span>
+                        <h3 class="text-2xl font-black mb-4 uppercase">Algorithmie Nucléaire</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">Développement d'outils d'optimisation de câblage sous contraintes de sûreté critiques. Migration de formats JSON vers XML.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest text-white/50">
+                            <span class="px-3 py-1 bg-white/5 rounded">Python</span>
+                            <span class="px-3 py-1 bg-white/5 rounded">Flask</span>
+                            <span class="px-3 py-1 bg-white/5 rounded">Sûreté</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 bg-white text-center">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter italic">Me <span class="text-accent font-black">Contacter</span></h2>
+                <p class="text-slate-500 font-bold mb-12">Actuellement ouvert aux opportunités en Freelance, CDD ou CDI.</p>
+                
+                <!-- Formulaire avec KwesForms (Stats + RGPD) -->
+                <form action="https://kwesforms.com/api/f/VOTRE_ID_KWESFORMS" method="POST" class="kwes-form text-left space-y-6 bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm">
+                    <div>
+                        <label for="email" class="block text-xs font-black uppercase mb-2 tracking-widest">Email</label>
+                        <input type="email" id="email" name="email" required data-kw-rules="required|email" class="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:border-accent outline-none font-bold">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-black uppercase mb-2 tracking-widest">Message</label>
+                        <textarea id="message" name="message" required data-kw-rules="required|min:10" rows="4" class="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:border-accent outline-none font-bold"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-slate-900 text-white font-black py-5 rounded-xl hover:bg-accent transition shadow-2xl uppercase tracking-widest text-sm">Envoyer la demande</button>
+                    <p class="text-center text-[10px] text-slate-400 italic">Ou par mail : adrien.debreuilly@gmail.com</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-xl font-black italic uppercase tracking-tighter">Adrien <span class="text-accent">DEBREUILLY</span></p>
+                <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mt-1">Développeur Informatique - Security by Design</p>
+            </div>
+            <div class="flex space-x-8 text-2xl">
+                <a href="https://www.linkedin.com/in/debreuillyadrien/" target="_blank" aria-label="LinkedIn" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" aria-label="GitHub" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-12 text-center text-[10px] text-slate-600 font-bold tracking-widest uppercase">
+            &copy; 2026 Adrien DEBREUILLY. Tout droit réservé.
+        </div>
+    </footer>
+
+</body>
 </html>
