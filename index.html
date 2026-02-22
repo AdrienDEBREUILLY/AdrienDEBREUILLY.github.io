@@ -22,6 +22,18 @@
             }
         }
     </script>
+    <!-- Custom Scripts -->
+    <script>
+        // Load KwesForms ID from JS to stay sober
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector('.kwes-form');
+            if (form) {
+                // Remplacez 'VOTRE_ID_KWESFORMS' par votre ID réel ici ou via une variable d'environnement si build step
+                const kwesId = 'VOTRE_ID_KWESFORMS'; 
+                form.setAttribute('action', 'https://kwesforms.com/api/f/' + kwesId);
+            }
+        });
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
@@ -39,73 +51,106 @@
     </nav>
 
     <main>
-        <!-- Bannière Visible & SEO (Sr-only) -->
-        <header class="pt-20">
-            <div class="container mx-auto px-6">
-                <img src="Bannière-Linkedin_Adrien_DEBREUILLY.png" alt="Solutions logicielles fiables, sécurisées et adaptées à chaque application métier. Gestion sur l'entièreté du cycle de vie d'un projet." class="w-full h-auto rounded-b-2xl shadow-2xl">
-                <!-- Texte SEO caché pour les moteurs de recherche -->
+        <!-- Section Bannière : Pleine largeur & Autonome -->
+        <section class="min-h-screen flex items-center justify-center bg-slate-900 pt-20">
+            <div class="w-full h-full">
+                <img src="Bannière-Linkedin_Adrien_DEBREUILLY.png" alt="Solutions logicielles fiables, sécurisées et adaptées à chaque application métier. Gestion sur l'entièreté du cycle de vie d'un projet." class="w-full h-auto object-cover shadow-2xl">
+                <!-- Texte SEO caché -->
                 <div class="sr-only">
                     <h1>Adrien DEBREUILLY - Développeur Informatique Full-Cycle</h1>
                     <p>Des solutions logicielles fiables, sécurisées et adaptées à chaque application métier.</p>
                     <p>Une gestion sur l'entièreté du cycle de vie d'un projet.</p>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <!-- Hero Section Textuelle -->
-        <section class="py-16 text-center">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter text-slate-900">
-                    Développeur Informatique <span class="text-accent underline decoration-4 decoration-slate-900">Full-Cycle</span>
+        <!-- Hero Section Textuelle : Pleine hauteur -->
+        <section class="min-h-screen flex items-center justify-center py-16 text-center bg-slate-50">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter text-slate-900 leading-none">
+                    Développeur Informatique <br>
+                    <span class="text-accent underline decoration-8 decoration-slate-900">Full-Cycle</span>
                 </h2>
-                <h3 class="text-xl md:text-2xl font-bold text-slate-500 mb-8 italic uppercase tracking-widest">Ingénieur Développement & Solutions Métiers</h3>
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-500 mb-12 italic uppercase tracking-widest">Ingénieur Développement & Solutions Métiers</h3>
                 
-                <div class="bg-primary text-white p-8 rounded-3xl shadow-2xl inline-block text-left border-l-8 border-accent">
-                    <p class="text-lg md:text-xl leading-relaxed">
-                        <span class="text-accent font-black uppercase italic tracking-widest block mb-2 text-sm">Security by Design :</span>
-                        "Optimisation applicative de la vélocité et de la sécurité dès les premières phases d'études et d'idées du projet."
+                <div class="bg-primary text-white p-10 md:p-16 rounded-[3rem] shadow-2xl inline-block text-left border-l-[12px] border-accent max-w-3xl">
+                    <p class="text-xl md:text-3xl leading-tight font-light">
+                        <span class="text-accent font-black uppercase italic tracking-widest block mb-4 text-base">Security by Design :</span>
+                        "Optimisation applicative de sa vélocité et de sa sécurité dès les premières phases d'idées et d'études du projet."
                     </p>
-                </div>
-                
-                <div class="mt-12 flex flex-wrap justify-center gap-6 font-black uppercase text-sm">
-                    <a href="#offres" class="bg-accent text-white px-10 py-4 rounded-full hover:scale-105 transition transform shadow-xl">Voir mes offres</a>
-                    <a href="#contact" class="border-2 border-primary text-primary px-10 py-4 rounded-full hover:bg-primary hover:text-white transition shadow-xl">Me contacter</a>
                 </div>
             </div>
         </section>
 
-        <!-- Expertise & Alternance (Le profil Consultant Pro) -->
-        <section id="expertise" class="py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
-                    <div class="flex-shrink-0">
-                        <img src="assets/img/avatar.png" alt="Adrien DEBREUILLY" class="w-40 h-40 rounded-3xl border-4 border-accent shadow-2xl rotate-3 hover:rotate-0 transition duration-500">
-                    </div>
-                    <div>
-                        <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter border-b-8 border-accent inline-block">Profil Consultant Professionnel</h2>
-                        <p class="text-slate-600 font-medium leading-relaxed">
-                            Intermédiaire expérimenté par l'alternance, je réponds aux problématiques métier par des solutions logicielles robustes (Web, Mobile, Desktop). Mon approche ne s'arrête pas au code : j'interviens de la phase d'idée jusqu'à la mise en production et le suivi opérationnel.
-                        </p>
-                    </div>
+        <!-- Expertise & Alternance (Vision Professionnelle) -->
+        <section id="expertise" class="py-24 bg-white border-t border-slate-100">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="mb-20">
+                    <h2 class="text-5xl md:text-6xl font-black mb-8 uppercase tracking-tighter border-b-[10px] border-accent inline-block leading-none">
+                        Expertise & <br> Solutions Métiers
+                    </h2>
+                    <p class="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed max-w-4xl">
+                        Intermédiaire expérimenté par l'alternance, je réponds aux problématiques métier par des solutions logicielles robustes (Web, Mobile, Desktop). Mon approche ne s'arrête pas au code : j'interviens de la phase d'idée jusqu'à la mise en production et le suivi opérationnel.
+                    </p>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-8 text-sm font-bold">
-                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-inner">
-                        <h4 class="text-accent uppercase mb-4 tracking-widest italic flex items-center">
-                            <i class="fas fa-graduation-cap mr-2"></i> Formation & Titres
+                <div class="grid md:grid-cols-2 gap-12 text-sm font-bold">
+                    <!-- Formations -->
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-inner">
+                        <h4 class="text-accent text-xl uppercase mb-8 tracking-widest italic flex items-center font-black">
+                            <i class="fas fa-graduation-cap mr-3"></i> Formations
                         </h4>
-                        <ul class="space-y-3">
-                            <li><span class="text-slate-400">2025</span> | Licence Pro CPI (Spé. CCVA)</li>
-                            <li><span class="text-slate-400">2024</span> | BTS SIO (Option SLAM)</li>
+                        <ul class="space-y-8 text-base">
+                            <li class="border-l-4 border-slate-200 pl-4">
+                                <h5 class="text-slate-900 font-black text-lg leading-tight uppercase">Licence Professionnelle CPI</h5>
+                                <p class="text-slate-500 font-bold italic uppercase text-sm mt-1">Coordinateur de Projet Informatique</p>
+                                <p class="text-slate-400 font-medium text-xs mt-2 uppercase">Spécialisation CCVA : Coordonner le Cycle de Vie des Applications</p>
+                            </li>
+                            <li class="border-l-4 border-slate-200 pl-4">
+                                <h5 class="text-slate-900 font-black text-lg leading-tight uppercase">BTS SIO</h5>
+                                <p class="text-slate-500 font-bold italic uppercase text-sm mt-1">Services Informatiques aux Organisations</p>
+                                <p class="text-slate-400 font-medium text-xs mt-2 uppercase">Option SLAM : Solutions Logicielles et Applications Métiers</p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-inner">
-                        <h4 class="text-accent uppercase mb-4 tracking-widest italic flex items-center">
-                            <i class="fas fa-tools mr-2"></i> Maîtrise Technique
+
+                    <!-- Maîtrise Technique -->
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-inner">
+                        <h4 class="text-accent text-xl uppercase mb-8 tracking-widest italic flex items-center font-black">
+                            <i class="fas fa-code mr-3"></i> Panel Technique
                         </h4>
-                        <p class="text-xs leading-relaxed">
-                            Python, JS/TS, Java, SQL, DevOps (Docker, CI/CD), Architecture Sécurisée.
-                        </p>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="text-[10px] uppercase text-slate-400 tracking-[0.2em] mb-2">Langages & Formats</h5>
+                                <p class="text-slate-900 text-sm leading-relaxed">
+                                    Python, JavaScript, TypeScript, SQL, HTML, CSS, Java, C++, PHP, Kotlin, XML, JSON.
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] uppercase text-slate-400 tracking-[0.2em] mb-2">Bases de Données</h5>
+                                <p class="text-slate-900 text-sm leading-relaxed">
+                                    PostgreSQL, MySQL, MariaDB.
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] uppercase text-slate-400 tracking-[0.2em] mb-2">DevOps & Automatisation</h5>
+                                <p class="text-slate-900 text-sm leading-relaxed">
+                                    Git, GitHub, GitLab, Docker, Kubernetes, Ansible, Packer, Terraform, SonarQube, Nginx, Apache.
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] uppercase text-slate-400 tracking-[0.2em] mb-2">Observabilité & Outils</h5>
+                                <p class="text-slate-900 text-sm leading-relaxed">
+                                    Grafana, Prometheus, Postman, Insomnia, Adminer.
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] uppercase text-slate-400 tracking-[0.2em] mb-2">Gestion & IDE</h5>
+                                <p class="text-slate-900 text-sm leading-relaxed">
+                                    Jira, ClickUp, Trello, JetBrains, VS Code, Android Studio.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,122 +160,141 @@
         <section id="offres" class="py-24 bg-slate-900 text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-black uppercase tracking-tighter italic">Offres <span class="text-accent">Détaillées</span></h2>
-                    <p class="text-slate-400 mt-4 font-bold tracking-widest uppercase text-xs">Un accompagnement basé sur le résultat et le cycle de vie</p>
+                    <h2 class="text-5xl font-black uppercase tracking-tighter italic">Solutions & <span class="text-accent">Engagements</span></h2>
+                    <p class="text-slate-400 mt-4 font-bold tracking-[0.3em] uppercase text-xs">Un accompagnement stratégique orienté vers le résultat concret</p>
                 </div>
                 
                 <div class="grid lg:grid-cols-3 gap-8">
                     <!-- Offre 1: Court terme -->
-                    <div class="p-8 bg-slate-800 rounded-3xl border-t-4 border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                            <i class="fas fa-bolt text-6xl"></i>
+                    <div class="p-10 bg-slate-800 rounded-[3rem] border-t-8 border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-25 transition transform group-hover:rotate-12">
+                            <i class="fas fa-bolt text-7xl"></i>
                         </div>
-                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Court Terme (3 à 15 jours)</span>
-                        <h3 class="text-2xl font-black mb-6 uppercase leading-tight">Expertise & Faisabilité</h3>
-                        <ul class="text-slate-400 text-sm space-y-4 flex-grow font-medium">
-                            <li><i class="fas fa-check text-accent mr-2"></i>Consultation technique & Étude d'idées</li>
-                            <li><i class="fas fa-check text-accent mr-2"></i>Audit de sécurité & Faisabilité</li>
-                            <li><i class="fas fa-check text-accent mr-2"></i>Mise en pratique immédiate</li>
+                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-4">Étude & Consultation (3 à 15 jours)</span>
+                        <h3 class="text-3xl font-black mb-8 uppercase leading-none">Flash Expertise</h3>
+                        <ul class="text-slate-300 text-base space-y-6 flex-grow font-medium">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-3"></i><span>Audit technique & Faisabilité de vos idées</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-3"></i><span>Cadrage DevSecOps & Sécurisation Flash</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-3"></i><span>Consultation stratégique & Preuve de concept</span></li>
                         </ul>
-                        <p class="mt-8 text-xs italic text-slate-500 font-bold border-t border-slate-700 pt-4 uppercase tracking-tighter">Paiement unique à la livraison</p>
+                        <div class="mt-12 pt-6 border-t border-slate-700">
+                            <p class="text-[10px] text-accent font-black uppercase tracking-[0.2em] mb-1 italic">Modalité Commerciale</p>
+                            <p class="text-sm font-black uppercase tracking-tight">Paiement unique à la livraison</p>
+                        </div>
                     </div>
 
                     <!-- Offre 2: Moyen terme -->
-                    <div class="p-8 bg-slate-800 rounded-3xl border-t-4 border-white flex flex-col h-full shadow-2xl scale-105 z-10 relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-white">
-                            <i class="fas fa-project-diagram text-6xl"></i>
+                    <div class="p-10 bg-white text-slate-900 rounded-[3rem] border-t-8 border-primary flex flex-col h-full shadow-2xl scale-105 z-10 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition transform group-hover:-rotate-12">
+                            <i class="fas fa-project-diagram text-7xl"></i>
                         </div>
-                        <span class="text-white font-black uppercase text-xs tracking-widest italic mb-2">Moyen Terme (1 à 3 mois)</span>
-                        <h3 class="text-2xl font-black mb-6 uppercase leading-tight">Référent & Structuration</h3>
-                        <ul class="text-slate-400 text-sm space-y-4 flex-grow font-medium">
-                            <li><i class="fas fa-check text-white mr-2"></i>Architecture logicielle avancée</li>
-                            <li><i class="fas fa-check text-white mr-2"></i>Structuration technique complète</li>
-                            <li><i class="fas fa-check text-white mr-2"></i>Accompagnement opérationnel</li>
+                        <span class="text-primary font-black uppercase text-xs tracking-widest italic mb-4">Accompagnement (1 à 3 mois)</span>
+                        <h3 class="text-3xl font-black mb-8 uppercase leading-none">Référent Technique</h3>
+                        <ul class="text-slate-600 text-base space-y-6 flex-grow font-bold">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Architecture logicielle & Structuration</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Implémentation de briques critiques</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Accompagnement au déploiement sécurisé</span></li>
                         </ul>
-                        <div class="mt-8 border-t border-slate-700 pt-4">
-                            <p class="text-[10px] text-accent font-black uppercase tracking-widest mb-1">Système de paiement par jalons</p>
-                            <p class="text-[10px] text-slate-500 font-bold uppercase italic">Jalons : Étude → Conception → Livraison Finale</p>
+                        <div class="mt-12 pt-6 border-t border-slate-100">
+                            <p class="text-[10px] text-primary font-black uppercase tracking-[0.2em] mb-1 italic">Facturation Professionnelle</p>
+                            <p class="text-sm font-black uppercase tracking-tight">Système de paiement par jalons validés</p>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase mt-1">Étude → Conception → Livraison</p>
                         </div>
                     </div>
 
                     <!-- Offre 3: Long terme -->
-                    <div class="p-8 bg-slate-800 rounded-3xl border-t-4 border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                            <i class="fas fa-box-open text-6xl"></i>
+                    <div class="p-10 bg-slate-800 rounded-[3rem] border-t-8 border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-25 transition transform group-hover:scale-110">
+                            <i class="fas fa-box-open text-7xl"></i>
                         </div>
-                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Long Terme (2 à 5 mois)</span>
-                        <h3 class="text-2xl font-black mb-6 uppercase leading-tight">Projet Clé en Main</h3>
-                        <ul class="text-slate-400 text-sm space-y-4 flex-grow font-medium">
-                            <li><i class="fas fa-check text-accent mr-2"></i>Gestion agile complète (Scrum)</li>
-                            <li><i class="fas fa-check text-accent mr-2"></i>De l'idée à la mise en production</li>
-                            <li><i class="fas fa-check text-accent mr-2"></i>Suivi technique inclus (12-18 mois)</li>
+                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-4">Solution Complète (2 à 5 mois)</span>
+                        <h3 class="text-3xl font-black mb-8 uppercase leading-none">Projet Clé en Main</h3>
+                        <ul class="text-slate-300 text-base space-y-6 flex-grow font-medium">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-3"></i><span>Gestion Agile/Scrum de A à Z</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-3"></i><span>Conception, Développement & Production</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-3"></i><span>Suivi de continuité post-livraison</span></li>
                         </ul>
-                        <div class="mt-8 border-t border-slate-700 pt-4">
-                            <p class="text-[10px] text-accent font-black uppercase tracking-widest mb-1">Modalités Professionnelles</p>
-                            <p class="text-[10px] text-slate-500 font-bold uppercase italic">Acompte au démarrage (5-20%) + Jalons Scrum</p>
+                        <div class="mt-12 pt-6 border-t border-slate-700">
+                            <p class="text-[10px] text-accent font-black uppercase tracking-[0.2em] mb-1 italic">Engagement de Partenariat</p>
+                            <p class="text-sm font-black uppercase tracking-tight">Acompte (5-20%) + Jalons de Sprint</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Suivi & Obsolescence -->
-                <div class="mt-20 max-w-2xl mx-auto text-center bg-white/5 p-8 rounded-3xl border border-white/10">
-                    <h4 class="text-accent font-black uppercase text-xs tracking-widest mb-4 italic">Engagement de continuité</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed italic">
-                        "Je propose un suivi post-prestation calculé selon l'obsolescence structurelle du produit. Ce temps de suivi (ex: 12 à 18 mois) est défini après étude pour garantir la pérennité de vos solutions."
+                <!-- Engagement de continuité -->
+                <div class="mt-20 max-w-3xl mx-auto text-center bg-white/5 p-12 rounded-[3rem] border border-white/10 shadow-inner">
+                    <h4 class="text-accent font-black uppercase text-sm tracking-[0.3em] mb-6 italic">Garantie de Pérennité</h4>
+                    <p class="text-xl text-slate-400 leading-relaxed italic font-light">
+                        "J’assure un suivi de continuité post-prestation pour garantir la stabilité de vos solutions. Ce temps de suivi (typiquement de 12 à 18 mois) est défini ensemble après étude, assurant ainsi la pérennité de vos infrastructures logicielles."
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Études de Cas (Projets) -->
+        <!-- Réalisations Marquantes (Projets) -->
         <section id="projects" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-black mb-16 text-center uppercase tracking-tighter italic underline decoration-accent">Réalisations <span class="text-accent">Marquantes</span></h2>
+                <h2 class="text-5xl font-black mb-20 text-center uppercase tracking-tighter italic underline decoration-[12px] decoration-accent">Réalisations <span class="text-accent">Majeures</span></h2>
                 
-                <div class="grid lg:grid-cols-3 gap-8">
-                    <!-- Projet 1 -->
-                    <article class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col h-full shadow-sm hover:shadow-2xl transition duration-500">
-                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">AME - E-Commerce</span>
-                        <h3 class="text-2xl font-black mb-4 uppercase">Refonte Plateforme</h3>
-                        <div class="text-slate-600 text-sm mb-6 flex-grow space-y-4 font-medium leading-relaxed">
-                            <p><strong class="text-slate-900">Problème :</strong> Plateforme obsolète non adaptée aux nouveaux usages métier.</p>
-                            <p><strong class="text-slate-900">Approche :</strong> Architecture dockerisée, sécurisation dès la conception (Security by Design).</p>
+                <div class="space-y-24">
+                    <!-- Projet 1: AME -->
+                    <article class="grid lg:grid-cols-2 gap-12 items-center p-12 bg-slate-50 rounded-[4rem] border border-slate-100 shadow-sm hover:shadow-2xl transition duration-700">
+                        <div>
+                            <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-4 block">Antre Monde Éditions (AME)</span>
+                            <h3 class="text-4xl font-black mb-6 uppercase leading-tight">Refonte Web & Gestion Digitale</h3>
+                            <div class="text-slate-600 text-lg space-y-6 font-medium leading-relaxed mb-8">
+                                <p><strong class="text-slate-900 underline decoration-2 decoration-accent">Mission :</strong> Modernisation complète d'une plateforme vitrine et e-commerce pour aligner le site avec les nouveaux usages métiers.</p>
+                                <p><strong class="text-slate-900 underline decoration-2 decoration-accent">Approche :</strong> Étude fonctionnelle, conception d'architecture dockerisée, intégration de paiements et tests de cybersécurité rigoureux.</p>
+                                <p><strong class="text-slate-900 underline decoration-2 decoration-accent">Résultat :</strong> Un environnement stable, performant et prêt pour la production avec suivi opérationnel continu.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-3 text-xs font-black uppercase tracking-widest text-slate-400">
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">HTML/CSS/JS</span>
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">TypeScript</span>
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">PostgreSQL</span>
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">Docker</span>
+                            </div>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">Docker</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">PostgreSQL</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">TS</span>
-                        </div>
+                        <div class="bg-slate-200 rounded-[3rem] aspect-video flex items-center justify-center text-slate-400 font-black uppercase tracking-[0.5em] italic">Visual Asset</div>
                     </article>
 
-                    <!-- Projet 2 -->
-                    <article class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col h-full shadow-sm hover:shadow-2xl transition duration-500">
-                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Valogène - Données</span>
-                        <h3 class="text-2xl font-black mb-4 uppercase">Audit & Automatisation</h3>
-                        <div class="text-slate-600 text-sm mb-6 flex-grow space-y-4 font-medium leading-relaxed">
-                            <p><strong class="text-slate-900">Problème :</strong> Enjeux nationaux nécessitant traçabilité et intégrité totale des flux.</p>
-                            <p><strong class="text-slate-900">Approche :</strong> Automatisation d'outils métiers de facturation et de réversibilité.</p>
+                    <!-- Projet 2: Valogène -->
+                    <article class="grid lg:grid-cols-2 gap-12 items-center p-12 bg-slate-900 text-white rounded-[4rem] shadow-2xl hover:shadow-accent/20 transition duration-700">
+                        <div class="lg:order-last">
+                            <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-4 block">Valogène (Eliance)</span>
+                            <h3 class="text-4xl font-black mb-6 uppercase leading-tight text-white">Contrôle & Intégrité de Données</h3>
+                            <div class="text-slate-400 text-lg space-y-6 font-medium leading-relaxed mb-8">
+                                <p><strong class="text-white underline decoration-2 decoration-accent">Problématique :</strong> Gestion de données à enjeux nationaux nécessitant fiabilité, traçabilité et réversibilité totale.</p>
+                                <p><strong class="text-white underline decoration-2 decoration-accent">Solution :</strong> Recettage de chaînes DevOps, contrôle d'intégrité et conception d'un outil d'automatisation des retours d'extraction d'anomalies.</p>
+                                <p><strong class="text-white underline decoration-2 decoration-accent">Impact :</strong> Fiabilisation de la chaîne de facturation et optimisation des processus de contrôle prestataire.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-3 text-xs font-black uppercase tracking-widest text-slate-500">
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full">Python</span>
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full">R</span>
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full">C/C++</span>
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full">DBeaver</span>
+                            </div>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">Python</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">R / C++</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">DBeaver</span>
-                        </div>
+                        <div class="bg-white/5 rounded-[3rem] aspect-video flex items-center justify-center text-white/10 font-black uppercase tracking-[0.5em] italic border border-white/10">Data Integrity</div>
                     </article>
 
-                    <!-- Projet 3 -->
-                    <article class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col h-full shadow-sm hover:shadow-2xl transition duration-500">
-                        <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-2">Edvance - Nucléaire</span>
-                        <h3 class="text-2xl font-black mb-4 uppercase">Algorithmie de Sûreté</h3>
-                        <div class="text-slate-600 text-sm mb-6 flex-grow space-y-4 font-medium leading-relaxed">
-                            <p><strong class="text-slate-900">Problème :</strong> Optimisation de câblage sous contraintes de ségrégation critiques.</p>
-                            <p><strong class="text-slate-900">Approche :</strong> Développement d'outils de routage et migration de flux JSON/XML.</p>
+                    <!-- Projet 3: Edvance -->
+                    <article class="grid lg:grid-cols-2 gap-12 items-center p-12 bg-slate-50 rounded-[4rem] border border-slate-100 shadow-sm hover:shadow-2xl transition duration-700">
+                        <div>
+                            <span class="text-accent font-black uppercase text-xs tracking-widest italic mb-4 block">Edvance (Groupe EDF)</span>
+                            <h3 class="text-4xl font-black mb-6 uppercase leading-tight">Optimisation Algorithmie Nucléaire</h3>
+                            <div class="text-slate-600 text-lg space-y-6 font-medium leading-relaxed mb-8">
+                                <p><strong class="text-slate-900 underline decoration-2 decoration-accent">Problématique :</strong> Optimisation du câblage en centrale nucléaire sous contraintes de ségrégation critiques.</p>
+                                <p><strong class="text-slate-900 underline decoration-2 decoration-accent">Réalisation :</strong> Développement d'outils métiers ("Découpleur", "Assembler") et migration de formats de données JSON vers XML.</p>
+                                <p><strong class="text-slate-900 underline decoration-2 decoration-accent">Engagement :</strong> Rigueur algorithmique extrême et respect des normes de sûreté du secteur énergétique.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-3 text-xs font-black uppercase tracking-widest text-slate-400">
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">Python</span>
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">PostgreSQL</span>
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">Flask</span>
+                                <span class="px-4 py-2 bg-white border border-slate-200 rounded-full">Sûreté Logicielle</span>
+                            </div>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">Python</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">Flask</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded">Sûreté</span>
-                        </div>
+                        <div class="bg-slate-200 rounded-[3rem] aspect-video flex items-center justify-center text-slate-400 font-black uppercase tracking-[0.5em] italic">Algo Sûreté</div>
                     </article>
                 </div>
             </div>
@@ -242,17 +306,22 @@
                 <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter italic">Lancer un <span class="text-accent font-black">Projet</span></h2>
                 <p class="text-slate-500 font-bold mb-12 uppercase tracking-widest text-xs">Ouvert aux opportunités en Freelance, CDD ou CDI</p>
                 
-                <form action="https://kwesforms.com/api/f/VOTRE_ID_KWESFORMS" method="POST" class="kwes-form text-left space-y-6 bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl">
-                    <div>
-                        <label for="email" class="block text-xs font-black uppercase mb-2 tracking-widest">Email Professionnel</label>
-                        <input type="email" id="email" name="email" required data-kw-rules="required|email" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-accent outline-none font-bold">
+                <form action="#" method="POST" class="kwes-form text-left space-y-8 bg-white p-12 md:p-16 rounded-[4rem] border border-slate-200 shadow-2xl relative">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-accent text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-xs shadow-xl">
+                        Demande d'Étude & Consultation
                     </div>
                     <div>
-                        <label for="message" class="block text-xs font-black uppercase mb-2 tracking-widest">Votre Problématique / Projet</label>
-                        <textarea id="message" name="message" required data-kw-rules="required|min:10" rows="4" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-accent outline-none font-bold" placeholder="Détaillez vos besoins..."></textarea>
+                        <label for="email" class="block text-[10px] font-black uppercase mb-3 tracking-[0.2em] text-slate-400">Email Professionnel</label>
+                        <input type="email" id="email" name="email" required data-kw-rules="required|email" class="w-full px-8 py-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-accent outline-none font-bold text-lg transition shadow-inner">
                     </div>
-                    <button type="submit" class="w-full bg-slate-900 text-white font-black py-5 rounded-xl hover:bg-accent transition shadow-2xl uppercase tracking-widest text-sm italic">Envoyer la demande d'étude</button>
-                    <p class="text-center text-[10px] text-slate-400 italic">Direct : adrien.debreuilly@gmail.com</p>
+                    <div>
+                        <label for="message" class="block text-[10px] font-black uppercase mb-3 tracking-[0.2em] text-slate-400">Votre Problématique / Projet</label>
+                        <textarea id="message" name="message" required data-kw-rules="required|min:10" rows="5" class="w-full px-8 py-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-accent outline-none font-bold text-lg transition shadow-inner" placeholder="Décrivez vos besoins métiers..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-slate-900 text-white font-black py-6 rounded-2xl hover:bg-accent transition shadow-2xl uppercase tracking-[0.2em] text-base italic transform hover:scale-[1.02]">
+                        Lancer l'analyse du projet
+                    </button>
+                    <p class="text-center text-[10px] text-slate-300 italic uppercase tracking-widest">Confidentialité & Sûreté des données garanties</p>
                 </form>
             </div>
         </section>
