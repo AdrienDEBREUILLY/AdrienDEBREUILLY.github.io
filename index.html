@@ -64,102 +64,223 @@
             </div>
         </section>
 
-        <!-- Hero Section Textuelle : Pleine hauteur visuelle -->
-        <section class="min-h-[80vh] flex items-center justify-center py-20 text-center bg-white">
-            <div class="container mx-auto px-6 max-w-screen-full">
-                <h2 class="text-6xl md:text-[7rem] font-black mb-12 uppercase tracking-tighter text-slate-900 leading-none">
+        <section class="min-h-[60vh] flex items-center justify-center py-20 text-center bg-white">
+            <div class="container mx-auto px-6 max-w-screen-xl">
+                <h2 class="text-5xl md:text-7xl font-black mb-10 uppercase tracking-tighter text-slate-900 leading-none">
                     Développeur <br>
                     Informatique <br>
-                    <span class="text-accent underline decoration-[15px] decoration-accent/20">Full-Cycle</span>
+                    <span class="text-accent underline decoration-[10px] decoration-accent/20">Full-Cycle</span>
                 </h2>
-                <h3 class="text-2xl md:text-4xl font-black text-slate-400 mb-16 italic uppercase tracking-[0.3em] w-full">Ingénieur Développement & Solutions Métiers</h3>
+                <h3 class="text-xl md:text-3xl font-black text-slate-400 mb-12 italic uppercase tracking-[0.2em] w-full">Ingénieur Développement & Solutions Métiers</h3>
                 
-                <div class="bg-slate-900/90 backdrop-blur-xl text-white p-10 md:p-14 rounded-[3rem] shadow-2xl text-left border border-white/10 border-l-[12px] border-l-accent max-w-5xl mx-auto relative overflow-hidden group hover:border-white/20 transition-all duration-500">
+                <div class="bg-slate-900/90 backdrop-blur-xl text-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl text-left border border-white/10 border-l-[10px] border-l-accent max-w-5xl mx-auto relative overflow-hidden group hover:border-white/20 transition-all duration-500">
                     <div class="relative z-10">
-                        <p class="text-accent font-black uppercase italic tracking-[0.3em] block mb-4 text-xl flex items-center">
-                            <span class="w-10 h-[2px] bg-accent mr-4 hidden md:block"></span>
+                        <p class="text-accent font-black uppercase italic tracking-[0.3em] block mb-4 text-lg flex items-center">
+                            <span class="w-8 h-[2px] bg-accent mr-4 hidden md:block"></span>
                             Security by Design :
                         </p>
-                        <p class="text-lg md:text-2xl leading-relaxed font-light text-slate-100">
+                        <p class="text-base md:text-xl leading-relaxed font-light text-slate-100">
                             "Le <span class="text-accent font-bold italic">Security by Design</span> consiste à intégrer la sécurité dès la phase de conception d'un logiciel ou d'un système, en anticipant les menaces et en structurant l'architecture pour minimiser les vulnérabilités à la source, plutôt que d'appliquer des correctifs de sécurité après développement. Cette approche proactive vise à réduire la surface d'attaque, prévenir les failles coûteuses et garantir une sécurité robuste et pérenne, tout en préservant l'agilité et l'évolutivité du projet."
                         </p>
                     </div>
                     <!-- Icône décorative subtile -->
                     <div class="absolute -bottom-6 -right-6 opacity-5 group-hover:opacity-10 transition-all duration-700">
-                        <i class="fas fa-shield-halved text-[15rem]"></i>
+                        <i class="fas fa-shield-halved text-[10rem]"></i>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Expertise (Vision Professionnelle) -->
-        <section id="expertise" class="py-32 bg-slate-50">
-            <div class="container mx-auto px-6 max-w-6xl">
+        <section id="expertise" class="py-40 bg-slate-100/80 relative overflow-hidden">
+            <!-- Décoration de fond Premium : Motif de grille & dégradé -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#3b82f6 1.5px, transparent 1.5px); background-size: 60px 60px;"></div>
+            <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-950/5 to-transparent"></div>
+            
+            <div class="container mx-auto px-6 max-w-7xl relative z-10">
                 <div class="mb-24 text-center">
-                    <h2 class="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter border-b-[12px] border-accent inline-block leading-none italic">
-                        Expertise & <br> Solutions Métiers
+                    <h2 class="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter border-b-[10px] border-accent inline-block leading-none italic text-slate-900">
+                        Expertise & <br> <span class="text-accent">Solutions Métiers</span>
                     </h2>
-                    <p class="text-xl md:text-2xl text-slate-500 font-medium leading-relaxed max-w-4xl mx-auto">
-                        Fort de 3 ans d'expérience acquise au cœur du terrain, je développe des solutions logicielles concrète pour répondre aux enjeux et problématiques métier. J'interviens sur l'ensemble du cycle de vie : de l'analyse des besoins à la mise en production, avec accompagnement opérationnel selon vos besoins.
+                    <p class="text-lg md:text-2xl text-slate-500 font-medium leading-relaxed max-w-5xl mx-auto italic">
+                        "Fort de 3 ans d'expérience acquise au cœur du terrain, je développe des solutions logicielles concrètes pour répondre aux enjeux et problématiques métier. J'interviens sur l'ensemble du cycle de vie : de l'analyse des besoins à la mise en production, avec un accompagnement opérationnel selon vos besoins."
                     </p>
                 </div>
                 
-                <div class="grid lg:grid-cols-12 gap-8 items-start">
-                    <!-- Formations : Gauche -->
-                    <div class="lg:col-span-5 p-12 bg-white rounded-[4rem] shadow-xl border border-slate-100 flex flex-col h-full">
-                        <h4 class="text-accent text-2xl uppercase mb-12 tracking-[0.3em] italic flex items-center font-black">
-                            <i class="fas fa-graduation-cap mr-4"></i> Formations
+                <div class="space-y-16">
+                    <!-- Formations : Full Width -->
+                    <div class="p-12 md:p-20 bg-white rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50 flex flex-col hover:shadow-accent/20 transition-all duration-700 group">
+                        <h4 class="text-accent text-3xl uppercase mb-16 tracking-[0.4em] italic flex items-center font-black group-hover:translate-x-2 transition-transform">
+                            <i class="fas fa-graduation-cap mr-5"></i> Formations
                         </h4>
-                        <ul class="space-y-12">
-                            <li>
-                                <h5 class="text-slate-900 font-black text-2xl leading-tight uppercase mb-2">Licence Professionnelle CPI</h5>
-                                <p class="text-accent font-black italic uppercase text-sm tracking-widest">Coordinateur de Projet Informatique</p>
-                                <p class="text-slate-400 font-bold text-xs mt-3 uppercase tracking-wider leading-relaxed">Spécialisation CCVA : Coordonner le Cycle de Vie des Applications</p>
-                                <p class="text-slate-600 font-bold text-xs mt-3 uppercase tracking-wider leading-relaxed">Développement logiciel & Pilotage de projet</p>
-                            </li>
-                            <li class="pt-12 border-t border-slate-50">
-                                <h5 class="text-slate-900 font-black text-2xl leading-tight uppercase mb-2">BTS SIO</h5>
-                                <p class="text-accent font-black italic uppercase text-sm tracking-widest">Services Informatiques aux Organisations</p>
-                                <p class="text-slate-400 font-bold text-xs mt-3 uppercase tracking-wider leading-relaxed">Option SLAM : Solutions Logicielles et Applications Métiers</p>
-                            </li>
-                        </ul>
+                        <div class="grid md:grid-cols-2 gap-16">
+                            <div class="relative pl-12 border-l-4 border-slate-100 group-hover:border-accent/30 transition-colors">
+                                <div class="absolute -left-[14px] top-0 w-6 h-6 rounded-full bg-slate-100 border-4 border-white group-hover:bg-accent transition-colors"></div>
+                                <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-4">Licence Professionnelle CPI</h5>
+                                <p class="text-accent font-black italic uppercase text-base tracking-widest mb-6">Coordinateur de Projet Informatique</p>
+                                <div class="space-y-4">
+                                    <p class="text-slate-500 font-bold text-sm uppercase tracking-wider leading-relaxed bg-slate-50 p-4 rounded-2xl">Spécialisation CCVA : Coordonner le Cycle de Vie des Applications</p>
+                                    <p class="text-slate-400 font-bold text-xs uppercase tracking-[0.2em] pl-4">Développement logiciel & Pilotage de projet</p>
+                                </div>
+                            </div>
+                            <div class="relative pl-12 border-l-4 border-slate-100 group-hover:border-accent/30 transition-colors">
+                                <div class="absolute -left-[14px] top-0 w-6 h-6 rounded-full bg-slate-100 border-4 border-white group-hover:bg-accent transition-colors"></div>
+                                <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-4">BTS SIO</h5>
+                                <p class="text-accent font-black italic uppercase text-base tracking-widest mb-6">Services Informatiques aux Organisations</p>
+                                <p class="text-slate-500 font-bold text-sm uppercase tracking-wider leading-relaxed bg-slate-50 p-4 rounded-2xl">Option SLAM : Solutions Logicielles et Applications Métiers</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Maîtrise Technique : Droite -->
-                    <div class="lg:col-span-7 p-12 bg-white rounded-[4rem] shadow-xl border border-slate-100 h-full">
-                        <h4 class="text-accent text-2xl uppercase mb-12 tracking-[0.3em] italic flex items-center font-black">
-                            <i class="fas fa-code mr-4"></i> Panel Technique
+                    <!-- Panel Technique : Full Width -->
+                    <div class="p-12 md:p-20 bg-white rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50 hover:shadow-accent/20 transition-all duration-700 group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+                        
+                        <h4 class="text-accent text-3xl uppercase mb-16 tracking-[0.4em] italic flex items-center font-black group-hover:translate-x-2 transition-transform">
+                            <i class="fas fa-code mr-5"></i> Panel Technique Complet
                         </h4>
-                        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
-                            <div>
-                                <h5 class="text-[10px] uppercase text-slate-300 font-black tracking-[0.4em] mb-3">Langages & Formats</h5>
-                                <p class="text-slate-900 text-sm font-bold leading-relaxed">
-                                    Python, JavaScript, TypeScript, SQL, HTML, CSS, Java, C++, PHP, Kotlin, XML, JSON.
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                            <!-- Category 1: Langages & Formats -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Langages & Formats</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    Python, JavaScript, TypeScript, SQL, HTML, CSS, Java, C++, PHP, Kotlin, R, Go, Rust, Bash/Shell, PowerShell, YAML, XML, JSON, TOML, HCL, Markdown, CSV.
+                                </p>
+                                <div class="mt-4 pt-4 border-t border-slate-100">
+                                    <p class="text-[9px] uppercase text-slate-400 font-black mb-2 tracking-widest">API / Protocoles</p>
+                                    <p class="text-slate-900 text-[11px] font-black">REST, GraphQL</p>
+                                </div>
+                            </div>
+
+                            <!-- Category 2: Bases de Données -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Bases de Données</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    PostgreSQL, MySQL, MariaDB, Redis, SQLite, MongoDB.
                                 </p>
                             </div>
-                            <div>
-                                <h5 class="text-[10px] uppercase text-slate-300 font-black tracking-[0.4em] mb-3">Bases de Données</h5>
-                                <p class="text-slate-900 text-sm font-bold leading-relaxed">
-                                    PostgreSQL, MySQL, MariaDB.
+
+                            <!-- Category 3: DevOps & Automatisation -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>DevOps & Automatisation</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    Git, GitHub, GitLab, GitHub Actions, GitLab CI, Docker, Docker Compose, Kubernetes, Portainer, Traefik, Consul, Jenkins, Ansible, Packer, Terraform, Vagrant, Make/Makefile, SonarQube, Nginx, Apache.
                                 </p>
                             </div>
-                            <div class="md:col-span-2">
-                                <h5 class="text-[10px] uppercase text-slate-300 font-black tracking-[0.4em] mb-3">DevOps & Automatisation</h5>
-                                <p class="text-slate-900 text-sm font-bold leading-relaxed">
-                                    Git, GitHub, GitLab, Docker, Kubernetes, Ansible, Packer, Terraform, SonarQube, Nginx, Apache.
+
+                            <!-- Category 4: Observabilité & Monitoring -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Observabilité & Monitoring</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed mb-4">
+                                    Grafana, Prometheus, Loki, Fluentd, Postman, Insomnia, DBeaver, pgAdmin (Jaeger, Sentry, OpenTelemetry).
                                 </p>
                             </div>
-                            <div>
-                                <h5 class="text-[10px] uppercase text-slate-300 font-black tracking-[0.4em] mb-3">Observabilité & Outils</h5>
-                                <p class="text-slate-900 text-sm font-bold leading-relaxed">
-                                    Grafana, Prometheus, Postman, Insomnia, Adminer.
+
+                            <!-- Category 5: Sécurité & Audits -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Sécurité & Audits</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    OWASP ZAP, Snyk, Trivy, Dependabot, Bandit, ESLint Security, Vault, SOPS, git-secrets, Fail2Ban, Let's Encrypt/Certbot, ModSecurity, OWASP Top 10, CIS Benchmarks, Nmap, Wireshark, Metasploit.
                                 </p>
                             </div>
-                            <div>
-                                <h5 class="text-[10px] uppercase text-slate-300 font-black tracking-[0.4em] mb-3">Gestion & IDE</h5>
-                                <p class="text-slate-900 text-sm font-bold leading-relaxed">
-                                    Jira, ClickUp, Trello, JetBrains, VS Code, Android Studio.
+
+                            <!-- Category 6: Tests & Qualité -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Tests & Qualité</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    pytest, Jest, JUnit, Selenium, Cypress, Coverage.py, Codecov, Black, Prettier, Pylint, Flake8, Locust, JMeter, Lighthouse.
                                 </p>
+                            </div>
+
+                            <!-- Category 7: Frameworks & Libs -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Frameworks & Libraries</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    Flask, Django, FastAPI, Express.js, Spring Boot, React, Vue.js, Angular, TailwindCSS, Bootstrap, Pandas, NumPy, SQLAlchemy, Prisma.
+                                </p>
+                            </div>
+
+                            <!-- Category 8: Cloud & Hébergement -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Cloud & Hébergement</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    Cloudflare, OVH.
+                                </p>
+                            </div>
+
+                            <!-- Category 9: Systèmes & OS -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Systèmes & OS</span>
+                                </h5>
+                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                    Ubuntu, Debian, CentOS, Arch Linux, Fedora, Red Hat (RHEL), Alpine Linux, Proxmox VE, Windows Server.
+                                </p>
+                            </div>
+
+                            <!-- Category 10: Gestion & Outils -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Gestion & Collaboration</span>
+                                </h5>
+                                <div class="space-y-3">
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent">Gestion :</span> Jira, ClickUp, Trello, Asana, Notion, Confluence, Miro, Figma.
+                                    </p>
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent">IDE :</span> Suite JetBrains, VS Code, Android Studio.
+                                    </p>
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent">Collaboration :</span> Slack, Discord, Teams.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Category 11: Méthodologies -->
+                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
+                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
+                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
+                                    <span>Méthodologies & Pratiques</span>
+                                </h5>
+                                <div class="space-y-3">
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent italic">Méthodes :</span> Agile/Scrum, Kanban, GitFlow.
+                                    </p>
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent italic">Architecture :</span> Microservices, REST API, GraphQL, Architecture Hexagonale, Event-Driven Architecture.
+                                    </p>
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent italic">DevSecOps :</span> Shift-Left Security, CI/CD Security, Infrastructure as Code (IaC), GitOps.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
