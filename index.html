@@ -149,11 +149,11 @@
                                     <span>Langages & Formats</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Python, JavaScript, TypeScript, SQL, HTML, CSS, Java, C++, PHP, Kotlin, R, Go, Rust, Bash/Shell, PowerShell, YAML, XML, JSON, TOML, HCL, Markdown, CSV.
+                                    Python, JavaScript, TypeScript, SQL, HTML, CSS, Java, C++, C#, PHP, Kotlin, R, Go, Rust, Bash/Shell, PowerShell, YAML, XML, JSON, TOML, HCL, Markdown, CSV.
                                 </p>
                                 <div class="mt-4 pt-4 border-t border-slate-100">
                                     <p class="text-[9px] uppercase text-slate-400 font-black mb-2 tracking-widest">API / Protocoles</p>
-                                    <p class="text-slate-900 text-[11px] font-black">REST, GraphQL</p>
+                                    <p class="text-slate-900 text-[11px] font-black">REST, GraphQL, WebSockets
                                 </div>
                             </div>
 
@@ -164,7 +164,7 @@
                                     <span>Bases de Données</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    PostgreSQL, MySQL, MariaDB, Redis, SQLite, MongoDB.
+                                    PostgreSQL, MySQL, MariaDB, Redis, SQLite, MongoDB + [Kafka, RabbitMQ, Redis Pub/Sub]
                                 </p>
                             </div>
 
@@ -175,7 +175,7 @@
                                     <span>DevOps & Automatisation</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Git, GitHub, GitLab, GitHub Actions, GitLab CI, Docker, Docker Compose, Kubernetes, Portainer, Traefik, Consul, Jenkins, Ansible, Packer, Terraform, Vagrant, Make/Makefile, SonarQube, Nginx, Apache.
+                                    Git, GitHub, GitLab, GitHub Actions, GitLab CI, Docker, Docker Compose, Kubernetes, Portainer, Traefik, Consul, Jenkins, Terraform, Ansible, Vagrant, Packer, Make/Makefile, Nginx, Apache.
                                 </p>
                             </div>
 
@@ -186,7 +186,7 @@
                                     <span>Observabilité & Monitoring</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed mb-4">
-                                    Grafana, Prometheus, Loki, Fluentd, Postman, Insomnia, DBeaver, pgAdmin (Jaeger, Sentry, OpenTelemetry).
+                                    Grafana, Prometheus, pgAdmin, Loki, OpenTelemetry, Fluentd, Alertmanager, Postman, Insomnia, DBeaver, Uptime Kuma, Netdata (Jaeger, Sentry, ELK Stack: Elasticsearch, Logstash, Kibana).
                                 </p>
                             </div>
 
@@ -197,7 +197,7 @@
                                     <span>Sécurité & Audits</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    OWASP ZAP, Snyk, Trivy, Dependabot, Bandit, ESLint Security, Vault, SOPS, git-secrets, Fail2Ban, Let's Encrypt/Certbot, ModSecurity, OWASP Top 10, CIS Benchmarks, Nmap, Wireshark, Metasploit.
+                                    SonarQube, OWASP ZAP, Burp Suite, Snyk, Trivy, Grype, Clair, Anchore, Dependabot, OWASP Dependency-Check, Bandit, ESLint Security, Semgrep, Checkov, Vault, SOPS, git-secrets, Sealed Secrets, CyberArk, OPA (Open Policy Agent), Kyverno, OAuth2, OIDC (Keycloak, Auth0), Fail2Ban, Let's Encrypt/Certbot, ModSecurity, OWASP Top 10, CIS Benchmarks, Nmap, Wireshark, Metasploit.
                                 </p>
                             </div>
 
@@ -208,7 +208,7 @@
                                     <span>Tests & Qualité</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    pytest, Jest, JUnit, Selenium, Cypress, Coverage.py, Codecov, Black, Prettier, Pylint, Flake8, Locust, JMeter, Lighthouse.
+                                    pytest, Jest, Vitest, JUnit, Selenium, Cypress, Playwright, Postman, Newman, TestContainers, Coverage.py, Codecov, Black, Prettier, Pylint, Flake8, Locust, k6, JMeter, Lighthouse.
                                 </p>
                             </div>
 
@@ -219,7 +219,7 @@
                                     <span>Frameworks & Libraries</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Flask, Django, FastAPI, Express.js, Spring Boot, React, Vue.js, Angular, TailwindCSS, Bootstrap, Pandas, NumPy, SQLAlchemy, Prisma.
+                                    Flask, Django, FastAPI, Next.js, Express.js, NestJS, Spring Boot (Spring Security), Laravel, Symfony, Flutter, React/React Native, Vue.js, Angular, TailwindCSS, Bootstrap, Pandas, NumPy, SQLAlchemy, Prisma, TypeORM, Drizzle, Hibernate, Kotlin/Kotlin Compose, Ionic (Gin, Fiber, Axum, Actix-web, Svelte, SvelteKit, Nuxt.js, Remix, Shadcn/ui, Vite) <span class="opacity-30">(TensorFlow, PyTorch, Scikit-learn, Keras, Hugging Face)</span>.
                                 </p>
                             </div>
 
@@ -230,7 +230,7 @@
                                     <span>Cloud & Hébergement</span>
                                 </h5>
                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Cloudflare, OVH.
+                                    Cloudflare, Clever Cloud, Infomaniak, Scaleway, OVH/OVHcloud, Outscale, Hetzner.
                                 </p>
                             </div>
 
@@ -275,7 +275,10 @@
                                         <span class="text-accent italic">Méthodes :</span> Agile/Scrum, Kanban, GitFlow.
                                     </p>
                                     <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent italic">Architecture :</span> Microservices, REST API, GraphQL, Architecture Hexagonale, Event-Driven Architecture.
+                                        <span class="text-accent italic">Architecture :</span> Microservices, Serverless, REST API, GraphQL, Architecture Hexagonale (Clean Architecture), DDD (Domain-Driven Design), Event-Driven Architecture.
+                                    </p>
+                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                        <span class="text-accent italic">Sécurité (ASASP/SecArch) :</span> Zero Trust, Threat Modeling, Security by Design, Hardening (OS/App), Compliance as Code.
                                     </p>
                                     <p class="text-slate-900 text-xs font-bold leading-relaxed">
                                         <span class="text-accent italic">DevSecOps :</span> Shift-Left Security, CI/CD Security, Infrastructure as Code (IaC), GitOps.
