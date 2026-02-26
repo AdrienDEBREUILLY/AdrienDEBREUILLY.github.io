@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,16 @@
             }
         });
     </script>
+    <style>
+        /* Supprime le contour bleu par défaut des summaries au clic (Chrome/Safari) */
+        summary:focus {
+            outline: none;
+        }
+        /* Cache la flèche par défaut dans certains navigateurs */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
@@ -103,7 +113,7 @@
                     <h2 class="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter border-b-[10px] border-accent inline-block leading-none italic text-slate-900">
                         Expertise & <br> <span class="text-accent">Solutions Métiers</span>
                     </h2>
-                    <p class="text-lg md:text-2xl text-slate-500 font-medium leading-relaxed max-w-5xl mx-auto italic">
+                    <p class="text-lg md:text-3xl text-slate-500 font-medium leading-relaxed max-w-5xl mx-auto italic">
                         "Fort de 3 ans d'expérience acquise au cœur du terrain, je développe des solutions logicielles concrètes pour répondre aux enjeux et problématiques métier. J'interviens sur l'ensemble du cycle de vie : de l'analyse des besoins à la mise en production, avec un accompagnement opérationnel selon vos besoins."
                     </p>
                 </div>
@@ -112,179 +122,440 @@
                     <!-- Formations : Full Width -->
                     <div class="p-12 md:p-20 bg-white rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50 flex flex-col hover:shadow-accent/20 transition-all duration-700 group">
                         <h4 class="text-accent text-3xl uppercase mb-16 tracking-[0.4em] italic flex items-center font-black group-hover:translate-x-2 transition-transform">
-                            <i class="fas fa-graduation-cap mr-5"></i> Formations
+                            <i class="fas fa-graduation-cap mr-5"></i> Formations & Diplômes
                         </h4>
-                        <div class="grid md:grid-cols-2 gap-16">
-                            <div class="relative pl-12 border-l-4 border-slate-100 group-hover:border-accent/30 transition-colors">
-                                <div class="absolute -left-[14px] top-0 w-6 h-6 rounded-full bg-slate-100 border-4 border-white group-hover:bg-accent transition-colors"></div>
-                                <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-4">Licence Professionnelle CPI</h5>
-                                <p class="text-accent font-black italic uppercase text-base tracking-widest mb-6">Coordinateur de Projet Informatique</p>
-                                <div class="space-y-4">
-                                    <p class="text-slate-500 font-bold text-sm uppercase tracking-wider leading-relaxed bg-slate-50 p-4 rounded-2xl">Spécialisation CCVA : Coordonner le Cycle de Vie des Applications</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+                            <!-- Licence LP CPI -->
+                            <div class="group/card relative p-8 bg-slate-50/50 rounded-[3rem] border border-slate-100 hover:border-accent/30 hover:bg-white transition-all duration-500">
+                                <div class="absolute -top-4 -right-4 bg-accent text-white text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest">Bac +3</div>
+                                
+                                <div class="mb-8">
+                                    <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-2 group-hover/card:text-accent transition-colors">Licence Pro. CPI</h5>
+                                    <p class="text-slate-400 font-black italic uppercase text-xs tracking-[0.2em]">Coordinateur de Projet Informatique</p>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <div class="bg-white/80 p-6 rounded-2xl shadow-sm border border-slate-100">
+                                        <p class="text-accent font-black text-[10px] uppercase tracking-widest mb-3 italic">Spécialisation CCVA</p>
+                                        <p class="text-slate-600 font-bold text-sm leading-relaxed italic">Coordonner le Cycle de Vie des Applications : Maîtrise de l'entièreté de la chaîne de production logicielle.</p>
+                                    </div>
+                                    
                                     <p class="text-slate-400 font-bold text-xs uppercase tracking-[0.2em] pl-4">Développement logiciel & Pilotage de projet</p>
+                                    
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Pilotage de Projet</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Management Agile</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Droit Informatique</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Développement Informatique & Web</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Informatique Approfondie</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="relative pl-12 border-l-4 border-slate-100 group-hover:border-accent/30 transition-colors">
-                                <div class="absolute -left-[14px] top-0 w-6 h-6 rounded-full bg-slate-100 border-4 border-white group-hover:bg-accent transition-colors"></div>
-                                <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-4">BTS SIO</h5>
-                                <p class="text-accent font-black italic uppercase text-base tracking-widest mb-6">Services Informatiques aux Organisations</p>
-                                <p class="text-slate-500 font-bold text-sm uppercase tracking-wider leading-relaxed bg-slate-50 p-4 rounded-2xl">Option SLAM : Solutions Logicielles et Applications Métiers</p>
+
+                            <!-- BTS SIO -->
+                            <div class="group/card relative p-8 bg-slate-50/50 rounded-[3rem] border border-slate-100 hover:border-accent/30 hover:bg-white transition-all duration-500">
+                                <div class="absolute -top-4 -right-4 bg-slate-900 text-white text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest">Bac +2</div>
+                                
+                                <div class="mb-8">
+                                    <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-2 group-hover/card:text-accent transition-colors">BTS SIO</h5>
+                                    <p class="text-slate-400 font-black italic uppercase text-xs tracking-[0.2em]">Services Informatiques aux Organisations</p>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <div class="bg-white/80 p-6 rounded-2xl shadow-sm border border-slate-100">
+                                        <p class="text-accent font-black text-[10px] uppercase tracking-widest mb-3 italic">Option SLAM</p>
+                                        <p class="text-slate-600 font-bold text-sm leading-relaxed italic">Solutions Logicielles et Applications Métiers : Développement, maintenance et évolution de solutions applicatives.</p>
+                                    </div>
+                                    
+                                    <p class="text-slate-400 font-bold text-xs uppercase tracking-[0.2em] pl-4">Conception applicative & Gestion de données</p>
+
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">informatique</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Développement informatique</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">POO</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Bases de Données</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Ingénierie & Cycle de Vie</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Audit</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <p class="mt-8 text-[10px] font-black uppercase tracking-[0.3em] text-accent/60 italic text-center">Cliquez sur une catégorie pour explorer le détail technique</p>
+
                     <!-- Panel Technique : Full Width -->
                     <div class="p-12 md:p-20 bg-white rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50 hover:shadow-accent/20 transition-all duration-700 group relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
-                        
+
                         <h4 class="text-accent text-3xl uppercase mb-16 tracking-[0.4em] italic flex items-center font-black group-hover:translate-x-2 transition-transform">
-                            <i class="fas fa-code mr-5"></i> Panel Technique Complet
+                            <i class="fas fa-code mr-5"></i> Panel Technique
                         </h4>
 
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
                             <!-- Category 1: Langages & Formats -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Langages & Formats</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Python, JavaScript, TypeScript, SQL, HTML, CSS, Java, C++, C#, PHP, Kotlin, R, Go, Rust, Bash/Shell, PowerShell, YAML, XML, JSON, TOML, HCL, Markdown, CSV.
-                                </p>
-                                <div class="mt-4 pt-4 border-t border-slate-100">
-                                    <p class="text-[9px] uppercase text-slate-400 font-black mb-2 tracking-widest">API / Protocoles</p>
-                                    <p class="text-slate-900 text-[11px] font-black">REST, GraphQL, WebSockets
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Langages & Formats</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Langages</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Python, JavaScript, TypeScript, SQL, Java, C++, C#, PHP, Kotlin, R, Go, Rust.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Scripts & Config</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Bash/Shell, PowerShell, YAML, TOML, HCL, Markdown.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Web & Data</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            HTML, CSS, XML, JSON, CSV.
+                                        </p>
+                                    </div>
+                                    <div class="pt-4 border-t border-slate-100">
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">API / Protocoles</p>
+                                        <p class="text-slate-900 text-[11px] font-black">REST, GraphQL, WebSockets</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </details>
 
                             <!-- Category 2: Bases de Données -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Bases de Données</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    PostgreSQL, MySQL, MariaDB, Redis, SQLite, MongoDB + [Kafka, RabbitMQ, Redis Pub/Sub]
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Bases de Données</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Relationnelles (SQL)</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            PostgreSQL, MySQL, MariaDB, SQLite.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">NoSQL & Temps Réel</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            MongoDB, Redis, Kafka, RabbitMQ, Redis Pub/Sub.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Administration & Outils</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Adminer, pgAdmin, DBeaver, phpMyAdmin.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 3: DevOps & Automatisation -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>DevOps & Automatisation</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Git, GitHub, GitLab, GitHub Actions, GitLab CI, Docker, Docker Compose, Kubernetes, Portainer, Traefik, Consul, Jenkins, Terraform, Ansible, Vagrant, Packer, Make/Makefile, Nginx, Apache.
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>DevOps & Automatisation</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">CI/CD & Versioning</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Git, GitHub, GitLab, GitHub Actions, GitLab CI, Jenkins.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Containerisation & Orchestration</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Docker, Docker Compose, Kubernetes, Portainer.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Infrastructure as Code (IaC)</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Terraform, Ansible, Vagrant, Packer.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Réseau & Web Servers</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Traefik, Consul, Nginx, Apache, Make/Makefile.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 4: Observabilité & Monitoring -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Observabilité & Monitoring</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed mb-4">
-                                    Grafana, Prometheus, pgAdmin, Loki, OpenTelemetry, Fluentd, Alertmanager, Postman, Insomnia, DBeaver, Uptime Kuma, Netdata (Jaeger, Sentry, ELK Stack: Elasticsearch, Logstash, Kibana).
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Observabilité & Monitoring</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Visualisation & Métriques</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Grafana, Prometheus, Netdata, Uptime Kuma, Alertmanager.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Logging & Tracing</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Loki, OpenTelemetry, Fluentd, Jaeger, Sentry, ELK Stack (Elasticsearch, Logstash, Kibana).
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Outils d'Analyse</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Postman, Insomnia.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 5: Sécurité & Audits -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Sécurité & Audits</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    SonarQube, OWASP ZAP, Burp Suite, Snyk, Trivy, Grype, Clair, Anchore, Dependabot, OWASP Dependency-Check, Bandit, ESLint Security, Semgrep, Checkov, Vault, SOPS, git-secrets, Sealed Secrets, CyberArk, OPA (Open Policy Agent), Kyverno, OAuth2, OIDC (Keycloak, Auth0), Fail2Ban, Let's Encrypt/Certbot, ModSecurity, OWASP Top 10, CIS Benchmarks, Nmap, Wireshark, Metasploit.
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Sécurité & Audits</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Scan & Analyse (SAST/DAST)</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            SonarQube, OWASP ZAP, Burp Suite, Snyk, Semgrep, Bandit, ESLint Security.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Conteneurs & Supply Chain</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Trivy, Grype, Clair, Anchore, Dependabot, OWASP Dependency-Check.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Secrets & IAM</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Vault, SOPS, Sealed Secrets, CyberArk, OAuth2, OIDC (Keycloak, Auth0).
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Cloud & Policy</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Checkov, git-secrets, OPA (Open Policy Agent), Kyverno.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Réseau & Pentest</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Fail2Ban, Let's Encrypt, ModSecurity, Nmap, Wireshark, Metasploit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 6: Tests & Qualité -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Tests & Qualité</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    pytest, Jest, Vitest, JUnit, Selenium, Cypress, Playwright, Postman, Newman, TestContainers, Coverage.py, Codecov, Black, Prettier, Pylint, Flake8, Locust, k6, JMeter, Lighthouse.
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Tests & Qualité</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Tests Unitaires & Intégration</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            pytest, Jest, Vitest, JUnit, TestContainers.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">E2E & Automatisation</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Selenium, Cypress, Playwright, Newman.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Qualité & Performance</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Coverage.py, Codecov, Black, Prettier, Pylint, Flake8, Locust, k6, JMeter, Lighthouse.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 7: Frameworks & Libs -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Frameworks & Libraries</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Flask, Django, FastAPI, Next.js, Express.js, NestJS, Spring Boot (Spring Security), Laravel, Symfony, Flutter, React/React Native, Vue.js, Angular, TailwindCSS, Bootstrap, Pandas, NumPy, SQLAlchemy, Prisma, TypeORM, Drizzle, Hibernate, Kotlin/Kotlin Compose, Ionic (Gin, Fiber, Axum, Actix-web, Svelte, SvelteKit, Nuxt.js, Remix, Shadcn/ui, Vite) <span class="opacity-30">(TensorFlow, PyTorch, Scikit-learn, Keras, Hugging Face)</span>.
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Frameworks & Libraries</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Backend</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Flask, Django, FastAPI, Express.js, NestJS, Spring Boot (Spring Security), Laravel, Symfony, Gin, Fiber, Axum, Actix-web.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Frontend</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Next.js, React, Vue.js, Angular, Svelte, SvelteKit, Nuxt.js, Remix.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Mobile & UI</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Flutter, React Native, Kotlin Compose, Ionic, TailwindCSS, Bootstrap, Shadcn/ui.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Data & IA</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Pandas, NumPy, TensorFlow, PyTorch, Scikit-learn, Keras, Hugging Face.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">ORM & Tooling</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            SQLAlchemy, Prisma, TypeORM, Drizzle, Hibernate, Vite.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 8: Cloud & Hébergement -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Cloud & Hébergement</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Cloudflare, Clever Cloud, Infomaniak, Scaleway, OVH/OVHcloud, Outscale, Hetzner.
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Cloud & Hébergement</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Solutions Cloud</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Cloudflare, Clever Cloud, Infomaniak, Scaleway, OVH/OVHcloud, Outscale, Hetzner.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 9: Systèmes & OS -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Systèmes & OS</span>
-                                </h5>
-                                <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                    Ubuntu, Debian, CentOS, Arch Linux, Fedora, Red Hat (RHEL), Alpine Linux, Proxmox VE, Windows Server.
-                                </p>
-                            </div>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Systèmes & OS</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Linux Distributions</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Ubuntu, Debian, CentOS, Arch Linux, Fedora, Red Hat (RHEL), Alpine Linux.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Virtualisation & Windows</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Proxmox VE, Windows Server.
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
 
                             <!-- Category 10: Gestion & Outils -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Gestion & Collaboration</span>
-                                </h5>
-                                <div class="space-y-3">
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent">Gestion :</span> Jira, ClickUp, Trello, Asana, Notion, Confluence, Miro, Figma.
-                                    </p>
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent">IDE :</span> Suite JetBrains, VS Code, Android Studio.
-                                    </p>
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent">Collaboration :</span> Slack, Discord, Teams.
-                                    </p>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Gestion & Collaboration</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Pilotage & Design</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Jira, ClickUp, Trello, Asana, Notion, Confluence, Miro, Figma.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Environnement (IDE)</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Suite JetBrains (IntelliJ, PyCharm, WebStorm, etc.), VS Code, Android Studio.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Communication</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Slack, Discord, Microsoft Teams.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </details>
 
                             <!-- Category 11: Méthodologies -->
-                            <div class="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500">
-                                <h5 class="text-[10px] uppercase text-slate-400 font-black tracking-[0.4em] mb-6 flex items-center">
-                                    <span class="w-6 h-[2px] bg-accent/30 mr-3"></span>
-                                    <span>Méthodologies & Pratiques</span>
-                                </h5>
-                                <div class="space-y-3">
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent italic">Méthodes :</span> Agile/Scrum, Kanban, GitFlow.
-                                    </p>
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent italic">Architecture :</span> Microservices, Serverless, REST API, GraphQL, Architecture Hexagonale (Clean Architecture), DDD (Domain-Driven Design), Event-Driven Architecture.
-                                    </p>
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent italic">Sécurité (ASASP/SecArch) :</span> Zero Trust, Threat Modeling, Security by Design, Hardening (OS/App), Compliance as Code.
-                                    </p>
-                                    <p class="text-slate-900 text-xs font-bold leading-relaxed">
-                                        <span class="text-accent italic">DevSecOps :</span> Shift-Left Security, CI/CD Security, Infrastructure as Code (IaC), GitOps.
-                                    </p>
+                            <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item self-start">
+                                <summary class="flex items-center cursor-pointer list-none p-6">
+                                    <h5 class="text-xs uppercase text-slate-600 font-black tracking-[0.4em] flex items-center flex-grow">
+                                        <span class="w-8 h-[2px] bg-accent/40 mr-3"></span>
+                                        <span>Méthodologies & Pratiques</span>
+                                    </h5>
+                                    <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="px-6 pb-6 space-y-4">
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Gestion de projet</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Agile/Scrum, Kanban, GitFlow.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Architecture</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Microservices, Serverless, REST API, GraphQL, Architecture Hexagonale (Clean Architecture), DDD (Domain-Driven Design), Event-Driven Architecture.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Sécurité (ASASP/SecArch)</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Zero Trust, Threat Modeling, Security by Design, Hardening (OS/App), Compliance as Code.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Culture DevSecOps</p>
+                                        <p class="text-slate-900 text-xs font-bold leading-relaxed">
+                                            Shift-Left Security, CI/CD Security, Infrastructure as Code (IaC), GitOps.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </details>
                         </div>
                     </div>
                 </div>
@@ -307,7 +578,7 @@
                             <i class="fas fa-bolt text-9xl"></i>
                         </div>
                         <span class="text-accent font-black uppercase text-[10px] tracking-[0.3em] italic mb-6">Étude & Consultation (3 à 15 jours)</span>
-                        <h3 class="text-4xl font-black mb-10 uppercase leading-none tracking-tighter">Flash Expertise</h3>
+                        <h3 class="text-4xl font-black mb-10 uppercase leading-none tracking-tighter">Conseil & Audit <br> Flash Expertise</h3>
                         <ul class="text-slate-300 text-base space-y-8 flex-grow font-bold">
                             <li class="flex items-start"><i class="fas fa-circle-check text-accent mt-1 mr-4"></i><span>Audit technique & Faisabilité de vos idées</span></li>
                             <li class="flex items-start"><i class="fas fa-circle-check text-accent mt-1 mr-4"></i><span>Cadrage DevSecOps & Sécurisation Flash</span></li>
@@ -324,9 +595,9 @@
                         <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:-rotate-12 text-primary">
                             <i class="fas fa-project-diagram text-9xl"></i>
                         </div>
-                        <span class="text-primary font-black uppercase text-[10px] tracking-[0.3em] italic mb-6">Accompagnement (1 à 3 mois)</span>
-                        <h3 class="text-4xl font-black mb-10 uppercase leading-none tracking-tighter">Référent Technique</h3>
-                        <ul class="text-slate-600 text-base space-y-8 flex-grow font-black">
+                        <span class="text-primary font-black uppercase text-[10px] tracking-[0.3em] italic mb-6">Accompagnement Tactique (1 à 3 mois)</span>
+                        <h3 class="text-4xl font-black mb-10 uppercase leading-none tracking-tighter">Référent Technique <br> & Architecture</h3>
+                        <ul class="text-slate-600 text-base space-y-8 flex-grow font-bold">
                             <li class="flex items-start"><i class="fas fa-circle-check text-primary mt-1 mr-4"></i><span>Architecture logicielle & Structuration</span></li>
                             <li class="flex items-start"><i class="fas fa-circle-check text-primary mt-1 mr-4"></i><span>Implémentation de briques critiques</span></li>
                             <li class="flex items-start"><i class="fas fa-circle-check text-primary mt-1 mr-4"></i><span>Accompagnement au déploiement sécurisé</span></li>
@@ -344,7 +615,7 @@
                             <i class="fas fa-box-open text-9xl"></i>
                         </div>
                         <span class="text-accent font-black uppercase text-[10px] tracking-[0.3em] italic mb-6">Solution Complète (2 à 5 mois)</span>
-                        <h3 class="text-4xl font-black mb-10 uppercase leading-none tracking-tighter">Projet Clé en Main</h3>
+                        <h3 class="text-4xl font-black mb-10 uppercase leading-none tracking-tighter">Ingénierie & <br> Solution Complète</h3>
                         <ul class="text-slate-300 text-base space-y-8 flex-grow font-bold">
                             <li class="flex items-start"><i class="fas fa-circle-check text-accent mt-1 mr-4"></i><span>Gestion Agile/Scrum de A à Z</span></li>
                             <li class="flex items-start"><i class="fas fa-circle-check text-accent mt-1 mr-4"></i><span>Conception, Développement & Production</span></li>
