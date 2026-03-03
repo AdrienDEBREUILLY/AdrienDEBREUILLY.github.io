@@ -17,7 +17,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#0f172a', accent: '#3b82f6' }
+                    colors: { primary: '#0f172a', accent: '#3b82f6', offwhite: '#f1f4f9', ghostwhite: '#f9fbff' }
                 }
             }
         }
@@ -81,7 +81,7 @@
     <div id="mobile-menu" class="fixed inset-0 bg-slate-950 z-[100] flex flex-col transition-all duration-500 opacity-0 pointer-events-none transform translate-y-[-100%] overflow-y-auto">
         <div class="flex flex-col min-h-full">
             <!-- Header inside menu for consistency -->
-            <div class="px-6 py-6 flex justify-end items-center border-b border-white/5">
+            <div class="px-6 py-6 flex justify-end items-center border-b border-offwhite/5">
                 <button id="mobile-menu-close" class="text-white p-2" aria-label="Fermer le menu">
                     <i class="fas fa-times text-3xl"></i>
                 </button>
@@ -105,7 +105,7 @@
             </div>
 
             <!-- Social Links at bottom of mobile menu -->
-            <div class="px-6 py-12 border-t border-white/5 flex justify-center space-x-12 text-2xl text-slate-500">
+            <div class="px-6 py-12 border-t border-offwhite/5 flex justify-center space-x-12 text-2xl text-slate-400">
                 <a href="https://www.linkedin.com/in/debreuillyadrien/" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-github"></i></a>
             </div>
@@ -162,16 +162,17 @@
             </div>
         </section>
 
-        <section class="min-h-[60vh] flex items-center justify-center py-12 md:py-20 text-center bg-white">
+        <!-- Section Hero -->
+        <section class="min-h-[60vh] flex items-center justify-center py-12 md:py-20 text-center bg-offwhite">
             <div class="container mx-auto px-6 max-w-screen-xl">
                 <h2 class="text-4xl sm:text-5xl md:text-7xl font-black mb-8 md:mb-10 uppercase tracking-tighter text-slate-900 leading-none">
                     Développeur <br>
                     Informatique <br>
                     <span class="text-accent underline decoration-[6px] md:decoration-[10px] decoration-accent/20">Full-Cycle</span>
                 </h2>
-                <h3 class="text-lg md:text-3xl font-black text-slate-400 mb-8 md:mb-12 italic uppercase tracking-[0.15em] md:tracking-[0.2em] w-full">Ingénieur Développement & Solutions Métiers</h3>
+                <h3 class="text-lg md:text-3xl font-black text-slate-600 mb-8 md:mb-12 italic uppercase tracking-[0.15em] md:tracking-[0.2em] w-full">Ingénieur Développement & Solutions Métiers</h3>
                 
-                <div class="bg-slate-900/90 backdrop-blur-xl text-white p-6 sm:p-8 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl text-left border border-white/10 border-l-[6px] md:border-l-[10px] border-l-red-600 max-w-6xl mx-auto relative overflow-hidden group hover:border-white/20 transition-all duration-500">
+                <div class="bg-slate-900/90 backdrop-blur-xl text-white p-6 sm:p-8 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl text-left border border-offwhite/10 border-l-[6px] md:border-l-[10px] border-l-red-600 max-w-6xl mx-auto relative overflow-hidden group hover:border-offwhite/20 transition-all duration-500">
                     <div class="relative z-10">
                         <p class="text-red-600 font-black uppercase italic tracking-[0.3em] block mb-4 text-lg flex items-center">
                             <span class="w-8 h-[2px] bg-red-600 mr-4 hidden md:block"></span>
@@ -189,11 +190,21 @@
             </div>
         </section>
 
-        <!-- Expertise (Vision Professionnelle) -->
-        <section id="expertise" class="py-20 md:py-40 bg-slate-100/80 relative overflow-hidden">
+        <!-- Section Expertise -->
+        <section id="expertise" class="py-20 md:py-40 bg-offwhite relative overflow-hidden">
+            <!-- Séparateur de section (Design Minimaliste & Organique - Horizontal) -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 md:w-1/2 flex items-center z-20 pointer-events-none">
+                <div class="h-px flex-grow bg-gradient-to-r from-transparent via-accent/50 to-accent"></div>
+                <div class="relative mx-4">
+                    <div class="absolute inset-0 bg-accent blur-md opacity-20 animate-pulse rounded-full"></div>
+                    <div class="w-2 h-2 rounded-full bg-accent relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.8)]"></div>
+                </div>
+                <div class="h-px flex-grow bg-gradient-to-l from-transparent via-accent/50 to-accent"></div>
+            </div>
+            
+            <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-offwhite to-transparent z-10 pointer-events-none"></div>
             <!-- Décoration de fond Premium : Motif de grille & dégradé -->
             <div class="absolute top-0 left-0 w-full h-full opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#3b82f6 1.5px, transparent 1.5px); background-size: 60px 60px;"></div>
-            <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
             <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-950/5 to-transparent"></div>
             
             <div class="max-w-[1940px] mx-auto px-6 relative z-10">
@@ -201,70 +212,70 @@
                     <h2 class="text-4xl sm:text-5xl md:text-7xl font-black mb-6 md:mb-8 uppercase tracking-tighter border-b-[6px] md:border-b-[10px] border-accent inline-block leading-none italic text-slate-900">
                         Expertise & <br> <span class="text-accent">Solutions Métiers</span>
                     </h2>
-                    <p class="text-base sm:text-lg md:text-3xl text-slate-500 font-medium leading-relaxed max-w-5xl mx-auto italic">
+                    <p class="text-base sm:text-lg md:text-3xl text-slate-600 font-medium leading-relaxed max-w-5xl mx-auto italic">
                         "Fort de 3 ans d'expérience acquise au cœur du terrain, je développe des solutions logicielles concrètes pour répondre aux enjeux et problématiques métier. J'interviens sur l'ensemble du cycle de vie : de l'analyse des besoins à la mise en production, avec un accompagnement opérationnel selon vos besoins."
                     </p>
                 </div>
                 
                 <div class="space-y-12 md:space-y-16">
                     <!-- Formations : Container 7xl -->
-                    <div class="max-w-7xl mx-auto p-6 sm:p-12 md:p-20 bg-white rounded-[1.5rem] md:rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50 flex flex-col hover:shadow-accent/20 transition-all duration-700 group">
+                    <div class="max-w-7xl mx-auto p-6 sm:p-12 md:p-20 bg-ghostwhite rounded-[1.5rem] md:rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200 flex flex-col hover:shadow-accent/20 transition-all duration-700 group">
                         <h4 class="text-accent text-xl sm:text-2xl md:text-3xl uppercase mb-10 md:mb-16 tracking-[0.3em] md:tracking-[0.4em] italic flex items-center font-black group-hover:translate-x-2 transition-transform">
                             <i class="fas fa-graduation-cap mr-4 md:mr-5"></i> Formations & Diplômes
                         </h4>
                         
                         <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
                             <!-- Licence LP CPI -->
-                            <div class="group/card relative p-6 sm:p-8 bg-slate-50/50 rounded-[2rem] sm:rounded-[3rem] border border-slate-100 hover:border-accent/30 hover:bg-white transition-all duration-500">
+                            <div class="group/card relative p-6 sm:p-8 bg-ghostwhite rounded-[2rem] sm:rounded-[3rem] border border-slate-200 hover:border-accent/30 hover:shadow-xl transition-all duration-500">
                                 <div class="absolute -top-4 -right-4 bg-accent text-white text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest">Bac +3</div>
                                 
                                 <div class="mb-8">
                                     <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-2 group-hover/card:text-accent transition-colors">Licence Pro. CPI</h5>
-                                    <p class="text-slate-400 font-black italic uppercase text-xs tracking-[0.2em] pl-5">Coordinateur de Projet Informatique</p>
+                                    <p class="text-slate-600 font-black italic uppercase text-xs tracking-[0.2em] pl-5">Coordinateur de Projet Informatique</p>
                                 </div>
 
                                 <div class="space-y-6">
-                                    <div class="bg-white/80 p-6 rounded-2xl shadow-sm border border-slate-100">
+                                    <div class="bg-ghostwhite p-6 rounded-2xl shadow-sm border border-slate-200">
                                         <p class="text-accent font-black text-[10px] uppercase tracking-widest mb-3 italic">Spécialisation CCVA : </p>
                                         <p class="text-slate-600 font-bold text-sm leading-relaxed italic text-center">Coordonner le Cycle de Vie des Applications</p>
                                     </div>
                                     
-                                    <p class="text-slate-400 font-bold text-xs uppercase tracking-[0.2em] text-center">Développement logiciel & Pilotage de projet</p>
+                                    <p class="text-slate-600 font-bold text-xs uppercase tracking-[0.2em] text-center">Développement logiciel & Pilotage de projet</p>
                                     
                                     <div class="flex flex-wrap gap-2 place-content-center">
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Pilotage de Projet</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Management Agile</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-red-500/10 group-hover/card:text-red-600 group-hover/card:border-red-500/20 transition-all">Droit Informatique</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Développement Informatique & Web</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Informatique Approfondie</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Pilotage de Projet</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Management Agile</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-red-500/10 group-hover/card:text-red-600 group-hover/card:border-red-500/20 transition-all">Droit Informatique</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Développement Informatique & Web</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Informatique Approfondie</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- BTS SIO -->
-                            <div class="group/card relative p-6 sm:p-8 bg-slate-50/50 rounded-[2rem] sm:rounded-[3rem] border border-slate-100 hover:border-accent/30 hover:bg-white transition-all duration-500">
+                            <div class="group/card relative p-6 sm:p-8 bg-ghostwhite rounded-[2rem] sm:rounded-[3rem] border border-slate-200 hover:border-accent/30 hover:shadow-xl transition-all duration-500">
                                 <div class="absolute -top-4 -right-4 bg-slate-900 text-white text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest">Bac +2</div>
                                 
                                 <div class="mb-8">
                                     <h5 class="text-slate-900 font-black text-3xl leading-tight uppercase mb-2 group-hover/card:text-accent transition-colors">BTS SIO</h5>
-                                    <p class="text-slate-400 font-black italic uppercase text-xs tracking-[0.2em] pl-5">Services Informatiques aux Organisations</p>
+                                    <p class="text-slate-600 font-black italic uppercase text-xs tracking-[0.2em] pl-5">Services Informatiques aux Organisations</p>
                                 </div>
 
                                 <div class="space-y-6">
-                                    <div class="bg-white/80 p-6 rounded-2xl shadow-sm border border-slate-100">
+                                    <div class="bg-ghostwhite p-6 rounded-2xl shadow-sm border border-slate-200">
                                         <p class="text-accent font-black text-[10px] uppercase tracking-widest mb-3 italic">Option SLAM : </p>
                                         <p class="text-slate-600 font-bold text-sm leading-relaxed italic text-center">Solutions Logicielles et Applications Métiers</p>
                                     </div>
                                     
-                                    <p class="text-slate-400 font-bold text-xs uppercase tracking-[0.2em] text-center">Conception applicative & Gestion de données</p>
+                                    <p class="text-slate-600 font-bold text-xs uppercase tracking-[0.2em] text-center">Conception applicative & Gestion de données</p>
 
                                     <div class="flex flex-wrap gap-2 place-content-center">
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">informatique</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Développement informatique</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">POO</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Bases de Données</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Ingénierie & Cycle de Vie</span>
-                                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-red-500/10 group-hover/card:text-red-600 group-hover/card:border-red-500/20 transition-all">Audit</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">informatique</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Développement informatique</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">POO</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Bases de Données</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-accent/10 group-hover/card:text-accent group-hover/card:border-accent/20 transition-all">Ingénierie & Cycle de Vie</span>
+                                        <span class="px-3 py-1 bg-offwhite text-slate-600 text-[9px] font-black uppercase tracking-wider rounded-full border border-slate-200 group-hover/card:bg-red-500/10 group-hover/card:text-red-600 group-hover/card:border-red-500/20 transition-all">Audit</span>
                                     </div>
                                 </div>
                             </div>
@@ -274,7 +285,7 @@
                     <p class="mt-8 text-[10px] font-black uppercase tracking-[0.3em] text-accent/60 italic text-center">Cliquez sur une catégorie pour explorer le détail technique</p>
 
                     <!-- Panel Technique : Élargi pour une meilleure répartition spatiale -->
-                    <div class="max-w-7xl mx-auto p-6 sm:p-12 md:p-20 bg-white rounded-[1.5rem] md:rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50 hover:shadow-accent/20 transition-all duration-700 group relative overflow-hidden">
+                    <div class="max-w-7xl mx-auto p-6 sm:p-12 md:p-20 bg-ghostwhite rounded-[1.5rem] md:rounded-[5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200 hover:shadow-accent/20 transition-all duration-700 group relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
 
                         <h4 class="text-accent text-xl sm:text-2xl md:text-3xl uppercase mb-10 md:mb-16 tracking-[0.3em] md:tracking-[0.4em] italic flex items-center font-black group-hover:translate-x-2 transition-transform">
@@ -284,10 +295,10 @@
                         <div class="flex flex-col items-center space-y-12 md:space-y-20 relative z-10 w-full">
                             <!-- Groupe 1: Développement & Data (Le Cœur Technique) -->
                             <div class="w-full">
-                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 mb-8 text-center italic">I. Développement & Architecture Data</p>
+                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600 mb-8 text-center italic">I. Développement & Architecture Data</p>
                                 <div class="flex flex-wrap justify-center gap-6 items-start">
                                     <!-- Category 1: Langages & Formats -->
-                                    <details class="bg-slate-50/50 rounded-[1.5rem] sm:rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[1.5rem] sm:rounded-[2.5rem] border border-slate-200 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-accent/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -295,7 +306,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Langages</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -314,15 +325,15 @@
                                                     HTML, CSS, XML, JSON, CSV.
                                                 </p>
                                             </div>
-                                            <div class="pt-4 border-t border-slate-100">
+                                            <div class="pt-4 border-t border-slate-200">
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">API / Protocoles</p>
-                                                <p class="text-slate-500 text-xs font-normal italic">REST, GraphQL, WebSockets</p>
+                                                <p class="text-slate-600 text-xs font-normal italic">REST, GraphQL, WebSockets</p>
                                             </div>
                                         </div>
                                     </details>
 
                                     <!-- Category 7: Frameworks & Libs -->
-                                    <details class="bg-slate-50/50 rounded-[1.5rem] sm:rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[1.5rem] sm:rounded-[2.5rem] border border-slate-200 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-accent/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -330,7 +341,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Backend</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -357,7 +368,7 @@
                                             </div>
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">IA & Deep Learning</p>
-                                                <p class="text-slate-400 text-xs font-medium leading-relaxed italic">
+                                                <p class="text-slate-500 text-xs font-medium leading-relaxed italic">
                                                     TensorFlow, PyTorch, Scikit-learn, Keras, Hugging Face, LangChain, Mistral AI API.
                                                 </p>
                                             </div>
@@ -371,7 +382,7 @@
                                     </details>
 
                                     <!-- Category 2: Bases de Données -->
-                                    <details class="bg-slate-50/50 rounded-[1.5rem] sm:rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[1.5rem] sm:rounded-[2.5rem] border border-slate-200 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-accent/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -379,7 +390,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Relationnelles (SQL)</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -405,10 +416,10 @@
 
                             <!-- Groupe 2: Ops, Infra & Observabilité (Le Moteur Opérationnel) -->
                             <div class="w-full">
-                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 mb-8 text-center italic">II. Ops, Infrastructure & Observabilité</p>
+                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600 mb-8 text-center italic">II. Ops, Infrastructure & Observabilité</p>
                                 <div class="flex flex-wrap justify-center gap-6 items-start">
                                     <!-- Category 3: DevOps & Automatisation -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-purple-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-purple-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-purple-500/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -416,7 +427,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">CI/CD & Versioning</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -445,7 +456,7 @@
                                     </details>
 
                                     <!-- Category 8: Cloud & Hébergement -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-red-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-red-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-red-500/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -453,7 +464,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-red-600 font-black mb-2 tracking-widest">Souveraineté & Protection</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -464,7 +475,7 @@
                                     </details>
 
                                     <!-- Category 9: Systèmes & OS -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-accent/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -472,7 +483,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[274px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[274px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Linux Distributions</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -489,7 +500,7 @@
                                     </details>
 
                                     <!-- Category 4: Observabilité & Monitoring -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-accent/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -497,7 +508,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Visualisation & Métriques</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -523,10 +534,10 @@
 
                             <!-- Groupe 3: Sûreté & Qualité (La Rigueur logicielle) -->
                             <div class="w-full">
-                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 mb-8 text-center italic">III. Sûreté, Sécurité & Qualité</p>
+                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600 mb-8 text-center italic">III. Sûreté, Sécurité & Qualité</p>
                                 <div class="flex flex-wrap justify-center gap-6 items-start">
                                     <!-- Category 5: Sécurité & Audits -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-red-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none self-start">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-red-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none self-start">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-red-500/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -534,7 +545,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-red-600 font-black mb-2 tracking-widest">Scan & Analyse (SAST/DAST)</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -569,7 +580,7 @@
                                     </details>
 
                                     <!-- Category 6: Tests & Qualité -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-purple-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-purple-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-purple-500/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -577,7 +588,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[294px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[294px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Tests Unitaires & Intégration</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -609,10 +620,10 @@
 
                             <!-- Groupe 4: Stratégie & Pilotage (Le Management de Projet) -->
                             <div class="w-full">
-                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 mb-8 text-center italic">IV. Stratégie, Pilotage & Collaboration</p>
+                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600 mb-8 text-center italic">IV. Stratégie, Pilotage & Collaboration</p>
                                 <div class="flex flex-wrap justify-center gap-6 items-start">
                                     <!-- Category 11: Méthodologies -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-purple-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-purple-500/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-purple-500/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -620,7 +631,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Gestion de projet</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -649,7 +660,7 @@
                                     </details>
 
                                     <!-- Category 10: Gestion & Outils -->
-                                    <details class="bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
+                                    <details class="bg-ghostwhite rounded-[2.5rem] border border-slate-200 hover:border-accent/20 transition-all duration-500 group/item w-full md:w-fit max-w-none">
                                         <summary class="inline-flex items-center cursor-pointer list-none p-6 gap-4 w-full">
                                             <h5 class="text-[10px] sm:text-xs uppercase text-slate-600 font-black tracking-[0.2em] sm:tracking-[0.4em] flex items-center whitespace-nowrap">
                                                 <span class="w-6 sm:w-8 h-[2px] bg-accent/40 mr-2 sm:mr-3 shrink-0"></span>
@@ -657,7 +668,7 @@
                                             </h5>
                                             <i class="fas fa-chevron-down text-[10px] text-slate-300 group-open/item:rotate-180 transition-transform ml-auto"></i>
                                         </summary>
-                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px]">
+                                        <div class="px-6 pb-6 space-y-4 w-full md:w-fit md:max-w-[300px] border-t border-slate-200 pt-4">
                                             <div>
                                                 <p class="text-[9px] uppercase text-accent font-black mb-2 tracking-widest">Pilotage & Design</p>
                                                 <p class="text-slate-900 text-xs font-bold leading-relaxed">
@@ -686,24 +697,27 @@
             </div>
         </section>
 
-        <!-- Les 3 Offres de Services -->
+        <!-- Section Solutions & Engagements -->
         <section id="offres" class="py-20 md:py-40 bg-slate-950 text-white relative">
+
+            <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-offwhite via-slate-950/50 to-transparent z-10 pointer-events-none"></div>
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-20"></div>
             <div class="max-w-[1940px] mx-auto px-6">
                 <div class="text-center mb-16 md:mb-24">
                     <h2 class="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter italic leading-none">Solutions & <br class="md:hidden"> <span class="text-accent">Engagements</span></h2>
-                    <p class="text-slate-500 mt-6 font-black tracking-[0.3em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px]">Un accompagnement stratégique orienté vers le résultat concret</p>
+                    <p class="text-slate-400 mt-6 font-black tracking-[0.3em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px]">Un accompagnement stratégique orienté vers le résultat concret</p>
                 </div>
                 
                 <div class="grid lg:grid-cols-3 gap-8 items-stretch">
                     <!-- Offre 1: Court terme -->
-                    <div class="p-8 sm:p-12 bg-slate-900 rounded-[2.5rem] md:rounded-[4rem] border-t-[8px] md:border-t-[12px] border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-6 md:p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:rotate-12">
+                    <div class="p-8 sm:p-12 bg-slate-900 rounded-[2.5rem] md:rounded-[4rem] border-t-[8px] md:border-t-[12px] border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group hover:scale-[1.02] hover:border-accent/80 transition-all duration-500 cursor-default border-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 p-6 md:p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:rotate-12 group-hover:scale-110 duration-700">
                             <i class="fas fa-bolt text-7xl md:text-9xl"></i>
                         </div>
                         <span class="text-accent font-black uppercase text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] italic mb-6 block">Expertise & Sûreté (1 à 10 jours)</span>
                         <h3 class="text-2xl sm:text-3xl md:text-4xl font-black mb-8 md:mb-10 uppercase leading-none tracking-tighter">Audit, Cadrage <br> & Intervention Flash</h3>
-                        <ul class="text-slate-300 text-sm md:text-base space-y-4 md:space-y-5 flex-grow font-bold pl-2 md:pl-6">
+                        <ul class="text-slate-200 text-sm md:text-base space-y-4 md:space-y-5 flex-grow font-bold pl-2 md:pl-6">
                             <li class="flex items-start"><i class="fas fa-shield-halved text-accent mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Audit de Sûreté & Diagnostic de vulnérabilités (SAST/DAST)</span></li>
                             <li class="flex items-start"><i class="fas fa-bolt text-accent mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Intervention technique ponctuelle & Résolution de bugs critiques</span></li>
                             <li class="flex items-start"><i class="fas fa-circle-check text-accent mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Étude de faisabilité et cadrage technique avec plan d'action exécutable</span></li>
@@ -713,12 +727,12 @@
                         <div class="mt-4 md:mt-8 pt-6 border-t border-slate-800">
                             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                 <div>
-                                    <p class="text-[10px] text-accent font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Facturation</p>
-                                    <p class="text-[12px] md:text-sm font-black uppercase">Forfait / TJM</p>
+                                    <p class="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Facturation</p>
+                                    <p class="text-[12px] md:text-sm font-black uppercase text-slate-200">Forfait / TJM</p>
                                 </div>
                                 <div class="text-left sm:text-right">
-                                    <p class="text-[10px] text-accent font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Livrable</p>
-                                    <p class="text-[12px] md:text-sm font-black uppercase">Rapport / Fix / Solution</p>
+                                    <p class="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Livrable</p>
+                                    <p class="text-[12px] md:text-sm font-black uppercase text-slate-200">Rapport / Fix / Solution</p>
                                 </div>
                             </div>
                         </div>
@@ -730,20 +744,21 @@
                     </div>
 
                     <!-- Offre 2: Moyen terme -->
-                    <div class="p-8 sm:p-12 bg-white text-slate-900 rounded-[2.5rem] md:rounded-[4rem] border-t-[8px] md:border-t-[12px] border-primary flex flex-col h-full shadow-2xl relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-6 md:p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:-rotate-12 text-primary">
+                    <div class="p-8 sm:p-12 bg-ghostwhite text-slate-900 rounded-[2.5rem] md:rounded-[4rem] border-t-[8px] md:border-t-[12px] border-primary flex flex-col h-full shadow-2xl relative overflow-hidden group hover:scale-[1.02] hover:border-accent/80 transition-all duration-500 cursor-default border border-slate-200">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 p-6 md:p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:-rotate-12 group-hover:scale-110 duration-700 text-primary">
                             <i class="fas fa-project-diagram text-7xl md:text-9xl"></i>
                         </div>
                         <span class="text-primary font-black uppercase text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] italic mb-6 block">Structuration & Leadership (1 à 6 mois)</span>
                         <h3 class="text-2xl sm:text-3xl md:text-4xl font-black mb-8 md:mb-10 uppercase leading-none tracking-tighter">Architecture, DevSecOps <br> & Lead Technique</h3>
-                        <ul class="text-slate-600 text-sm md:text-base space-y-4 md:space-y-5 flex-grow font-bold pl-2 md:pl-6">
+                        <ul class="text-slate-700 text-sm md:text-base space-y-4 md:space-y-5 flex-grow font-bold pl-2 md:pl-6">
                             <li class="flex items-start"><i class="fas fa-circle-check text-primary mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Architecture logicielle robuste alignée aux besoins métier</span></li>
                             <li class="flex items-start"><i class="fas fa-shield-halved text-primary mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Mise en place de pipeline DevSecOps & Supply Chain Security</span></li>
                             <li class="flex items-start"><i class="fas fa-people-group text-primary mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Lead technique : mentoring, revues de code et standards d’équipe</span></li>
                             <li class="flex items-start"><i class="fas fa-code-branch text-primary mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Standardisation de la qualité et stratégie de tests automatisés</span></li>
                             <li class="flex items-start"><i class="fas fa-vial text-primary mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Pilotage de livraison technique : jalons, qualité et documentation</span></li>
                         </ul>
-                        <div class="mt-4 md:mt-8 pt-6 border-t border-slate-100">
+                        <div class="mt-4 md:mt-8 pt-6 border-t border-slate-200">
                             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                 <div>
                                     <p class="text-[10px] text-primary font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Facturation</p>
@@ -763,13 +778,14 @@
                     </div>
 
                     <!-- Offre 3: Long terme -->
-                    <div class="p-8 sm:p-12 bg-slate-900 rounded-[2.5rem] md:rounded-[4rem] border-t-[8px] md:border-t-[12px] border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-6 md:p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-110">
+                    <div class="p-8 sm:p-12 bg-slate-900 rounded-[2.5rem] md:rounded-[4rem] border-t-[8px] md:border-t-[12px] border-accent flex flex-col h-full shadow-2xl relative overflow-hidden group hover:scale-[1.02] hover:border-accent/80 transition-all duration-500 cursor-default border-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 p-6 md:p-8 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-110 duration-700">
                             <i class="fas fa-box-open text-7xl md:text-9xl"></i>
                         </div>
                         <span class="text-accent font-black uppercase text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] italic mb-6 block">Ingénierie & Produit (6 à 18 mois)</span>
                         <h3 class="text-2xl sm:text-3xl md:text-4xl font-black mb-8 md:mb-10 uppercase leading-none tracking-tighter">Ingénierie Full-Cycle <br> & Solutions Métiers</h3>
-                        <ul class="text-slate-300 text-sm md:text-base space-y-4 md:space-y-5 flex-grow font-bold pl-2 md:pl-6">
+                        <ul class="text-slate-200 text-sm md:text-base space-y-4 md:space-y-5 flex-grow font-bold pl-2 md:pl-6">
                             <li class="flex items-start"><i class="fas fa-box-open text-accent mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Conception & Développement de produit Full-Cycle & Full-Stack</span></li>
                             <li class="flex items-start"><i class="fas fa-shield-halved text-accent mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Ingénierie de sécurité applicative & Gouvernance des données sensibles</span></li>
                             <li class="flex items-start"><i class="fas fa-cloud-arrow-up text-accent mt-1 mr-4 shrink-0 w-5 text-center"></i><span>Déploiement Cloud Souverain & Cloud-Native (OVH, Outscale)</span></li>
@@ -779,13 +795,13 @@
                         <div class="mt-4 md:mt-8 pt-6 border-t border-slate-800">
                             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                 <div>
-                                    <p class="text-[10px] text-accent font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Facturation</p>
-                                    <p class="text-[12px] md:text-sm font-black uppercase">Acompte (ex : 20%-30%) &</p>
-                                    <p class="text-[12px] md:text-sm font-black uppercase opacity-80 italic">[ Jalons (TJM) jusqu'à Livraison ]</p>
+                                    <p class="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Facturation</p>
+                                    <p class="text-[12px] md:text-sm font-black uppercase text-slate-200">Acompte (ex : 20%-30%) &</p>
+                                    <p class="text-[12px] md:text-sm font-black uppercase text-slate-300 italic">[ Jalons (TJM) jusqu'à Livraison ]</p>
                                 </div>
                                 <div class="text-left sm:text-right">
-                                    <p class="text-[10px] text-accent font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Livrable</p>
-                                    <p class="text-[12px] md:text-sm font-black uppercase">Solution clé en main</p>
+                                    <p class="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] mb-1 italic underline decoration-2">Livrable</p>
+                                    <p class="text-[12px] md:text-sm font-black uppercase text-slate-200">Solution clé en main</p>
                                 </div>
                             </div>
                         </div>
@@ -797,8 +813,8 @@
                     </div>
                 </div>
 
-                <!-- Engagement de continuité & Agilité -->
-                <div class="mt-20 md:mt-32 max-w-6xl mx-auto text-center bg-white/5 p-8 sm:p-12 md:p-16 rounded-[2.5rem] md:rounded-[4rem] border border-white/10 shadow-inner">
+                <!-- Engagement -> continuité & agilité -->
+                <div class="mt-20 md:mt-32 max-w-6xl mx-auto text-center bg-white/5 p-8 sm:p-12 md:p-16 rounded-[2.5rem] md:rounded-[4rem] border border-offwhite/10 shadow-inner">
                     <h4 class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] md:tracking-[0.4em] mb-6 md:mb-8 italic underline decoration-accent/20">Philosophie & Engagement Durable</h4>
                     <p class="text-lg md:text-2xl text-slate-100 leading-relaxed italic font-light max-w-4xl mx-auto">
                         "Ma philosophie est d'accompagner par l'automatisation et l'ingénierie <span class="text-accent font-bold">intelligente</span>. J'interviens avec une rigueur de <span class="text-accent font-bold">sécurité</span> - <span class="text-accent font-bold">sûreté</span> et d'optimisation pour transformer vos enjeux et problématiques en solutions numériques <span class="text-accent font-bold">robustes</span> et professionnels."
@@ -806,106 +822,123 @@
                 </div>
             </div>
         </section>
+        <!-- Section Réalisations Majeures -->
+        <section id="projects" class="py-20 md:py-40 bg-offwhite relative">
 
-        <!-- Réalisations Marquantes (Projets) -->
-        <section id="projects" class="py-20 md:py-40 bg-white">
-            <div class="max-w-[1940px] mx-auto px-6">
+            <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-slate-900 to-offwhite z-10 pointer-events-none"></div>
+            <div class="max-w-[1940px] mx-auto px-6 relative z-20">
                 <h2 class="text-4xl sm:text-5xl md:text-7xl font-black mb-16 md:mb-32 text-center uppercase tracking-tighter italic leading-none">Réalisations <br class="sm:hidden"> <span class="text-accent underline decoration-[8px] md:decoration-[15px] decoration-accent/20">Majeures</span></h2>
                 
                 <div class="space-y-24 md:space-y-48">
-                    <!-- Projet 1: AME -->
-                    <article class="grid lg:grid-cols-2 gap-10 md:gap-16 items-center p-6 sm:p-12 md:p-16 bg-slate-50 rounded-[1.5rem] md:rounded-[5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition duration-700">
+                    <article class="group grid lg:grid-cols-2 gap-10 md:gap-16 items-center p-8 sm:p-12 md:p-16 bg-slate-900 text-white rounded-[2.5rem] md:rounded-[5rem] shadow-2xl hover:shadow-accent/20 hover:scale-[1.01] transition-all duration-700">
                         <div>
-                            <span class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] italic mb-4 md:mb-6 block">Antre Monde Éditions (AME)</span>
-                            <h3 class="text-2xl sm:text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase leading-tight tracking-tighter">Refonte Web & <br> Gestion Digitale</h3>
-                            <div class="text-slate-600 text-base md:text-lg space-y-6 md:space-y-8 font-bold leading-relaxed mb-10 md:mb-12">
-                                <p><strong class="text-slate-900 underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Contexte & Enjeux :</strong> Refonte complète de la plateforme (vitrine & e-commerce) pour moderniser l'image de marque et s'adapter aux nouveaux usages de l'entreprise (PDF, print-on-demand).</p>
-                                <p><strong class="text-slate-900 underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Ingénierie & Développement :</strong> De l'étude initiale à la mise en production : définition des besoins, choix technologiques, architecture dockerisée et intégration de services (paiement, services internes mail/export métiers).</p>
-                                <p><strong class="text-slate-900 underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Sûreté & Opérations :</strong> Mise en place de tests unitaires, fonctionnels et de cybersécurité. Préparation rigoureuse de la pré-production et du suivi opérationnel continu (contrôles, corrections, ajustements).</p>
+                            <span class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] italic mb-4 md:mb-6 block group-hover:translate-x-2 transition-transform duration-500">Antre Monde Éditions (AME)</span>
+                            <h3 class="text-2xl sm:text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase leading-tight tracking-tighter">Refonte du site web <br> & Projets digitaux</h3>
+                            <div class="text-slate-200 text-base md:text-lg space-y-4 md:space-y-6 font-bold leading-relaxed mb-10 md:mb-12">
+                                <p class="text-sm md:text-base italic">Mise en place de la refonte du site web de l’entreprise dans le cadre d’un projet d’évolution et de modernisation du site existant, visant à aligner la plateforme avec la nouvelle image et les nouveaux usages de l’entreprise, depuis les phases d’étude et de structuration jusqu’à la préparation de la mise en production et du suivi opérationnel.</p>
+                                <ul class="space-y-2 md:space-y-3">
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Étude initiale du projet : analyse du contexte, des besoins métier et des contraintes.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Définition détaillée des besoins fonctionnels et des contraintes techniques.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Choix et validation des technologies à utiliser ou à écarter selon les objectifs et les contraintes.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Conception de l’architecture, conception et développement du site avec : partie vitrine, e-commerce, fonctionnalités métiers, environnement dockerisé.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Intégration de services externes (paiement, print-on-demand, produits numériques / PDF, …) et des services internes de l’entreprise (mail, exportation métiers, …).</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Mise en place et exécution des tests : tests unitaires, tests fonctionnels, tests techniques, tests de cybersécurité.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Préparation des phases de pré-production avec vérification des conformités par rapport à l’étude et aux besoins définis.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Préparation du déploiement, préparation de la mise en production du site et préparation du suivi opérationnel continu (contrôles, corrections, ajustements).</li>
+                                </ul>
                             </div>
-                            <div class="flex flex-wrap gap-2 md:gap-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">HTML/CSS/JS</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">TypeScript</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">PostgreSQL</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">Docker</span>
-                            </div>
-                        </div>
-                        <div class="bg-slate-200 rounded-[2rem] md:rounded-[4rem] aspect-video flex flex-col items-center justify-center text-slate-400 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] italic border-2 md:border-4 border-white shadow-inner">
-                            <i class="fas fa-display text-3xl md:text-4xl mb-4 opacity-20"></i>
-                            <span>Visual Asset</span>
-                        </div>
-                    </article>
-
-                    <!-- Projet 2: Valogène -->
-                    <article class="grid lg:grid-cols-2 gap-10 md:gap-16 items-center p-8 sm:p-12 md:p-16 bg-slate-900 text-white rounded-[2.5rem] md:rounded-[5rem] shadow-2xl hover:shadow-accent/20 transition duration-700">
-                        <div class="lg:order-last">
-                            <span class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] italic mb-4 md:mb-6 block">Valogène (Eliance)</span>
-                            <h3 class="text-2xl sm:text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase leading-tight tracking-tighter">Contrôle & <br> Intégrité de Données</h3>
-                            <div class="text-slate-400 text-base md:text-lg space-y-6 md:space-y-8 font-bold leading-relaxed mb-10 md:mb-12">
-                                <p><strong class="text-white underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Contexte Critique :</strong> Gestion de données à enjeux nationaux nécessitant une fiabilité absolue, une traçabilité totale et une réversibilité des chaînes d'outils métiers / DevOps.</p>
-                                <p><strong class="text-white underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Expertise Recette & Dev :</strong> Contrôle de l'intégrité des données prestataires, recettage de chaînes de commande et de facturation (vers organisme national SIG), et évolution de la page web client d'Eliance.</p>
-                                <p><strong class="text-white underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Automatisation :</strong> Conception d'un outil automatisant les retours d'extraction d'anomalies de la chaîne de facturation pour optimiser les processus de contrôle.</p>
-                            </div>
-                            <div class="flex flex-wrap gap-2 md:gap-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full">Python</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full">R</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full">C/C++</span>
-                                <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full">DBeaver</span>
+                            <div class="flex flex-wrap gap-2 md:gap-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">HTML/CSS/JS</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">TypeScript</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">PostgreSQL</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">Docker</span>
                             </div>
                         </div>
-                        <div class="bg-white/5 rounded-[2rem] md:rounded-[4rem] aspect-video flex flex-col items-center justify-center text-white/10 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] italic border border-white/10 shadow-inner overflow-hidden relative">
-                            <i class="fas fa-database text-3xl md:text-4xl mb-4 opacity-50"></i>
-                            <span>Data Integrity</span>
+                        <div class="bg-white/5 rounded-[2rem] md:rounded-[4rem] aspect-video flex flex-col items-center justify-center text-white/10 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] italic border border-white/10 shadow-inner overflow-hidden relative group-hover:scale-105 group-hover:rotate-1 transition-transform duration-700">
+                            <i class="fas fa-display text-3xl md:text-4xl mb-4 opacity-50 group-hover:opacity-80 transition-opacity duration-500"></i>
+                            <span class="group-hover:text-white/40 transition-colors duration-500">Full - Cycle / Full - Stack</span>
                             <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
                         </div>
                     </article>
 
-                    <!-- Projet 3: Edvance -->
-                    <article class="grid lg:grid-cols-2 gap-10 md:gap-16 items-center p-6 sm:p-12 md:p-16 bg-slate-50 rounded-[1.5rem] md:rounded-[5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition duration-700">
-                        <div>
-                            <span class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] italic mb-4 md:mb-6 block">Edvance (Groupe EDF)</span>
-                            <h3 class="text-2xl sm:text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase leading-tight tracking-tighter">Optimisation <br> Algorithmie Nucléaire</h3>
-                            <div class="text-slate-600 text-base md:text-lg space-y-6 md:space-y-8 font-bold leading-relaxed mb-10 md:mb-12">
-                                <p><strong class="text-slate-900 underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Optimisation de Sûreté :</strong> Participation au développement de l'outil « DEDALE » dédié à l'optimisation critique des câbles en centrale nucléaire selon des règles de ségrégation strictes.</p>
-                                <p><strong class="text-slate-900 underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Ingénierie Algorithmique :</strong> Développement d'outils métiers spécialisés : « Découpleur » (correction de routage), « Assembler Cable Liste » et « Forced Path Converter » (état des câbles).</p>
-                                <p><strong class="text-slate-900 underline decoration-[2px] md:decoration-[3px] decoration-accent/30 uppercase text-[10px] md:text-xs tracking-widest block mb-1 md:mb-2">Évolution Data :</strong> Modernisation des fonctionnalités de l'outil « Pigeon » avec migration stratégique du format de données de JSON vers XML pour répondre aux nouveaux standards métiers.</p>
+                    <article class="group grid lg:grid-cols-2 gap-10 md:gap-16 items-center p-6 sm:p-12 md:p-16 bg-ghostwhite rounded-[1.5rem] md:rounded-[5rem] border border-slate-200 shadow-sm hover:shadow-2xl hover:border-accent/20 hover:scale-[1.01] transition-all duration-700">
+                        <div class="lg:order-last">
+                            <span class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] italic mb-4 md:mb-6 block group-hover:-translate-x-2 transition-transform duration-500">Valogène (Eliance)</span>
+                            <h3 class="text-2xl sm:text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase leading-tight tracking-tighter">Recettage & <br> Outils Internes</h3>
+                            <div class="text-slate-700 text-base md:text-lg space-y-4 md:space-y-6 font-bold leading-relaxed mb-10 md:mb-12">
+                                <p class="text-sm md:text-base italic">Contrôle, recettage et requêtes d’amélioration de chaînes d’outils métiers et de données critiques gérées par des prestataires externes, incluant la vérification de la bonne tenue des données et des chaînes d’outils métiers / DevOps, dans un contexte de gestion de données à enjeux nationaux nécessitant fiabilité, traçabilité et réversibilité.</p>
+                                <ul class="space-y-2 md:space-y-3">
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Vérification de la cohérence et de l’intégrité des données stockées par les prestataires.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Recettage d’une chaîne de bon de commande à partir d’un cahier de recette fait au préalable.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Recettage de la mise en réversibilité de la chaîne de facturation des gènes d'intérêts vers le SIG (organisme national).</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Conception d’un outil automatisant les retours d’extraction d’anomalie, de la chaîne de facturation de l’entité.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Participation à l’évolution de la page web client d’Eliance.</li>
+                                </ul>
                             </div>
-                            <div class="flex flex-wrap gap-2 md:gap-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">Python</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">PostgreSQL</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">Flask</span>
-                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white border border-slate-200 rounded-full">Sûreté Logicielle</span>
+                            <div class="flex flex-wrap gap-2 md:gap-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-700">
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-ghostwhite border border-slate-200 rounded-full group-hover:border-accent/30 transition-colors duration-500">Python</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-ghostwhite border border-slate-200 rounded-full group-hover:border-accent/30 transition-colors duration-500">R</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-ghostwhite border border-slate-200 rounded-full group-hover:border-accent/30 transition-colors duration-500">C/C++</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-ghostwhite border border-slate-200 rounded-full group-hover:border-accent/30 transition-colors duration-500">DBeaver</span>
                             </div>
                         </div>
-                        <div class="bg-slate-200 rounded-[2rem] md:rounded-[4rem] aspect-video flex flex-col items-center justify-center text-slate-400 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] italic border-2 md:border-4 border-white shadow-inner">
-                            <i class="fas fa-microchip text-3xl md:text-4xl mb-4 opacity-20"></i>
-                            <span>Algo Sûreté</span>
+                        <div class="bg-slate-200 rounded-[2rem] md:rounded-[4rem] aspect-video flex flex-col items-center justify-center text-slate-600 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] italic border-2 md:border-4 border-ghostwhite shadow-inner group-hover:scale-105 group-hover:-rotate-1 transition-transform duration-700">
+                            <i class="fas fa-database text-3xl md:text-4xl mb-4 opacity-20 group-hover:opacity-40 transition-opacity duration-500"></i>
+                            <span class="group-hover:text-slate-600 transition-colors duration-500">Data Integrity</span>
+                        </div>
+                    </article>
+
+                    <article class="group grid lg:grid-cols-2 gap-10 md:gap-16 items-center p-8 sm:p-12 md:p-16 bg-slate-900 text-white rounded-[2.5rem] md:rounded-[5rem] shadow-2xl hover:shadow-accent/20 hover:scale-[1.01] transition-all duration-700">
+                        <div>
+                            <span class="text-accent font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] italic mb-4 md:mb-6 block group-hover:translate-x-2 transition-transform duration-500">Edvance (Groupe EDF)</span>
+                            <h3 class="text-2xl sm:text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase leading-tight tracking-tighter">Optimisation <br> & Automatisation</h3>
+                            <div class="text-slate-200 text-base md:text-lg space-y-4 md:space-y-6 font-bold leading-relaxed mb-10 md:mb-12">
+                                <p class="text-sm md:text-base italic">Participation au développement de l’outil « DEDALE », servant à optimiser les câbles dans une centrale nucléaire et obéissant à différentes règles de ségrégation.</p>
+                                <ul class="space-y-2 md:space-y-3">
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Développement d’un outil « Découpleur » détectant et corrigeant les routages de câbles dans une zone donnée.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Développement d’un outil « Assembler Cable Liste ».</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Développement d’un outil « Forced Path Converter » modifiant l’état d’un câble.</li>
+                                    <li class="flex gap-3"><span class="text-accent">•</span> Évolution des fonctionnalités de l’outil « Pigeon » avec changement du format de données de JSON vers XML.</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 md:gap-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">Python</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">PostgreSQL</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">Flask</span>
+                                <span class="px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-full group-hover:border-accent/30 transition-colors duration-500">Sûreté Logicielle</span>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-[2rem] md:rounded-[4rem] aspect-video flex flex-col items-center justify-center text-white/10 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] italic border border-white/10 shadow-inner overflow-hidden relative group-hover:scale-105 group-hover:rotate-1 transition-transform duration-700">
+                            <i class="fas fa-microchip text-3xl md:text-4xl mb-4 opacity-50 group-hover:opacity-80 transition-opacity duration-500"></i>
+                            <span class="group-hover:text-white/40 transition-colors duration-500">Algo Sûreté</span>
+                            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
-
-        <!-- Lancer un projet (Contact) -->
+        <!-- Section Lancer un Projet -->
         <section id="contact" class="py-24 md:py-48 bg-slate-950 text-center relative overflow-hidden">
+
+            <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-offwhite to-slate-950 z-10 pointer-events-none"></div>
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-30"></div>
             <div class="max-w-[1940px] mx-auto px-6 relative z-10">
                 <h2 class="text-4xl sm:text-5xl md:text-[5rem] font-black mb-10 uppercase tracking-tighter italic text-white leading-none">Lancer un <br class="md:hidden"> <span class="text-accent font-black">Projet</span></h2>
-                <p class="text-slate-600 font-black tracking-[0.3em] md:tracking-[0.5em] uppercase text-[9px] md:text-[10px] mb-16 md:mb-24">Ouvert aux opportunités en Freelance, CDD ou CDI</p>
+                <p class="text-slate-400 font-black tracking-[0.3em] md:tracking-[0.5em] uppercase text-[9px] md:text-[10px] mb-16 md:mb-24">Ouvert aux opportunités en Freelance, CDD ou CDI</p>
                 
-                <form action="#" method="POST" class="kwes-form text-left space-y-8 md:space-y-10 bg-white p-6 sm:p-16 md:p-24 rounded-[1.5rem] md:rounded-[5rem] shadow-[0_0_120px_rgba(59,130,246,0.15)] relative max-w-6xl mx-auto">
+                <form action="#" method="POST" class="kwes-form text-left space-y-8 md:space-y-10 bg-offwhite p-6 sm:p-16 md:p-24 rounded-[1.5rem] md:rounded-[5rem] shadow-[0_0_120px_rgba(59,130,246,0.15)] relative max-w-6xl mx-auto">
                     <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-accent text-white px-5 sm:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl font-black uppercase text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.4em] shadow-xl italic whitespace-nowrap">
                         Demande d'Étude & Consultation
                     </div>
 
                     <div class="group">
-                        <label for="email" class="block text-[9px] md:text-[10px] font-black uppercase mb-3 md:mb-4 tracking-[0.3em] md:tracking-[0.4em] text-slate-400 group-focus-within:text-accent transition">Email Professionnel</label>
-                        <input type="email" id="email" name="email" required data-kw-rules="required|email" class="w-full px-6 md:px-10 py-4 md:py-6 bg-slate-50 border-2 border-slate-100 rounded-2xl md:rounded-[2.5rem] focus:border-accent outline-none font-bold text-slate-900 transition-all focus:bg-white shadow-inner">
+                        <label for="email" class="block text-[9px] md:text-[10px] font-black uppercase mb-3 md:mb-4 tracking-[0.3em] md:tracking-[0.4em] text-slate-600 group-focus-within:text-accent transition">Email Professionnel</label>
+                        <input type="email" id="email" name="email" required data-kw-rules="required|email" class="w-full px-6 md:px-10 py-4 md:py-6 bg-offwhite border-2 border-slate-200 rounded-2xl md:rounded-[2.5rem] focus:border-accent outline-none font-bold text-slate-900 transition-all focus:bg-offwhite shadow-inner">
                     </div>
                     
                     <div class="group">
-                        <label for="message" class="block text-[9px] md:text-[10px] font-black uppercase mb-3 md:mb-4 tracking-[0.3em] md:tracking-[0.4em] text-slate-400 group-focus-within:text-accent transition">Votre Problématique / Projet</label>
-                        <textarea id="message" name="message" required data-kw-rules="required|min:10" rows="6" class="w-full px-6 md:px-10 py-4 md:py-6 bg-slate-50 border-2 border-slate-100 rounded-2xl md:rounded-[3rem] focus:border-accent outline-none font-bold text-slate-900 transition-all focus:bg-white shadow-inner" placeholder="Décrivez vos besoins métiers..."></textarea>
+                        <label for="message" class="block text-[9px] md:text-[10px] font-black uppercase mb-3 md:mb-4 tracking-[0.3em] md:tracking-[0.4em] text-slate-600 group-focus-within:text-accent transition">Votre Problématique / Projet</label>
+                        <textarea id="message" name="message" required data-kw-rules="required|min:10" rows="6" class="w-full px-6 md:px-10 py-4 md:py-6 bg-offwhite border-2 border-slate-200 rounded-2xl md:rounded-[3rem] focus:border-accent outline-none font-bold text-slate-900 transition-all focus:bg-offwhite shadow-inner" placeholder="Décrivez vos besoins métiers..."></textarea>
                     </div>
 
                     <div class="pt-6 md:pt-10">
@@ -914,7 +947,7 @@
                         </button>
                     </div>
 
-                    <p class="text-center text-[9px] md:text-[10px] text-slate-400 italic font-bold tracking-[0.2em] md:tracking-[0.3em] pt-6 md:pt-8 uppercase">
+                    <p class="text-center text-[9px] md:text-[10px] text-slate-600 italic font-bold tracking-[0.2em] md:tracking-[0.3em] pt-6 md:pt-8 uppercase">
                         Confidentialité & Sûreté des données garanties
                     </p>
                 </form>
@@ -925,7 +958,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-white py-24 border-t border-white/5">
+    <footer class="bg-slate-950 text-white py-24 border-t border-offwhite/5">
         <div class="max-w-[1940px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-16">
             <div class="text-center md:text-left">
                 <p class="text-4xl font-black italic uppercase tracking-tighter mb-3">Adrien <span class="text-accent underline decoration-8 decoration-accent/20">DEBREUILLY</span></p>
@@ -936,7 +969,7 @@
                 <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" aria-label="GitHub" class="hover:text-accent transition transform hover:scale-125"><i class="fab fa-github"></i></a>
             </div>
         </div>
-        <div class="max-w-[1940px] mx-auto px-6 mt-24 text-center text-[10px] text-slate-800 font-black tracking-[0.6em] uppercase border-t border-white/5 pt-16 italic">
+        <div class="max-w-[1940px] mx-auto px-6 mt-24 text-center text-[10px] text-slate-800 font-black tracking-[0.6em] uppercase border-t border-offwhite/5 pt-16 italic">
             &copy; 2026 Adrien DEBREUILLY. Solutions Métiers & Sûreté Logicielle.
         </div>
     </footer>
