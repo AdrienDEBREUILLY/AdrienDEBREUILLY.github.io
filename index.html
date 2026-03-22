@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrien DEBREUILLY | Développeur Informatique Full-Cycle - Security by Design</title>
     <meta name="description" content="Solutions logicielles fiables, sécurisées et adaptées à chaque application métier. Gestion sur l'entièreté du cycle de vie d'un projet par Adrien DEBREUILLY, Développeur Full-Cycle.">
-    
+
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://kwesforms.com;
+    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+    font-src 'self' https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    connect-src https://kwesforms.com; ">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
     
     <script>
         tailwind.config = {
@@ -92,8 +104,8 @@
 
             <!-- Social Links at bottom of mobile menu -->
             <div class="px-6 py-12 border-t border-offwhite/5 flex justify-center space-x-12 text-2xl text-slate-400">
-                <a href="https://www.linkedin.com/in/debreuillyadrien/" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/debreuillyadrien/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </div>
@@ -959,8 +971,8 @@
                 <p class="text-slate-700 text-[10px] font-black uppercase tracking-[0.4em] italic">Développeur Full-Cycle - Security by Design</p>
             </div>
             <div class="flex space-x-16 text-4xl">
-                <a href="https://www.linkedin.com/in/debreuillyadrien/" target="_blank" aria-label="LinkedIn" class="hover:text-accent transition transform hover:scale-125"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" aria-label="GitHub" class="hover:text-accent transition transform hover:scale-125"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/debreuillyadrien/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-accent transition transform hover:scale-125"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.github.com/AdrienDEBREUILLY" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-accent transition transform hover:scale-125"><i class="fab fa-github"></i></a>
             </div>
         </div>
         <div class="max-w-[1940px] mx-auto px-6 mt-24 text-center text-[10px] text-slate-800 font-black tracking-[0.6em] uppercase border-t border-offwhite/5 pt-16 italic">
